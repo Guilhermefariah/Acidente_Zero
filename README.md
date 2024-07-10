@@ -24,10 +24,13 @@ acidente-zero/
 │ └── ...
 ├── src/
 │ ├── components/
-│ │ ├── Header.tsx
-│ │ ├── Footer.tsx
-│ │ ├── ReportForm.tsx
-│ │ └── ...
+│ ├── Header/
+│ │   ├── styles/
+│ │   │   └── Header.module.css
+│ │   ├── Header.tsx
+│ ├── Footer.tsx
+│ ├── ReportForm.tsx
+│ └── ...
 │ ├── pages/
 │ │ ├── api/
 │ │ │ ├── reports.ts
