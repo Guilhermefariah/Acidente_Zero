@@ -5,8 +5,8 @@ import styles from './styles/Header.module.css';
 const Header: React.FC = () => {
     return (
         <header className={styles.header}>
-            <div>
-                <div>
+            <div className="container mx-auto">
+                <div className="flex justify-between items-center">
                     a
                 </div>
             </div>
