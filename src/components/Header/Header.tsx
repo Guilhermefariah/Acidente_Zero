@@ -1,6 +1,7 @@
 import React from "react";
 import styles from './styles/Header.module.css';
 import Logo from "./Logo";
+import Menu from "./Menu";
 
 
 const Header: React.FC = () => {
@@ -11,6 +12,7 @@ const Header: React.FC = () => {
                     <Logo />
                 </div>
             </div>
+            <Menu />
         </header>
     )
 }
