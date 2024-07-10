@@ -30,6 +30,8 @@ acidente-zero/
 │ │   ├── styles/
 │ │   │   └── Header.module.css
 │ │   ├── Header.tsx
+│ │   ├── Logo.tsx
+│ │   ├── Header.tsx
 │ ├── Footer.tsx
 │ ├── ReportForm.tsx
 │ └── ...
