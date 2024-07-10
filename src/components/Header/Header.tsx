@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './styles/Header.module.css';
+import Logo from "./Logo";
 
 
 const Header: React.FC = () => {
@@ -7,7 +8,7 @@ const Header: React.FC = () => {
         <header className={styles.header}>
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
-                    a
+                    <Logo />
                 </div>
             </div>
         </header>

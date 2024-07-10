@@ -19,6 +19,8 @@ O projeto **Acidente Zero** é um painel para relatar problemas na cidade relaci
 ```sh
 acidente-zero/
 ├── public/
+│ │   ├──img/
+│ │   │  ├── logo.png
 │ ├── favicon.ico
 │ ├── vercel.svg
 │ └── ...
