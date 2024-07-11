@@ -3,6 +3,7 @@ import styles from './styles/Header.module.css';
 import Logo from "./Logo";
 import Menu from "./Menu";
 import Search from "./Search";
+import UserMenu from "./UserMenu";
 
 
 const Header: React.FC = () => {
@@ -13,6 +14,7 @@ const Header: React.FC = () => {
                     <Logo />
                     <div className="flex items-center space-x-4">
                         <Search />
+                        <UserMenu />
                     </div>
                 </div>
             </div>
