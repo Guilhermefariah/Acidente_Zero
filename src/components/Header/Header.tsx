@@ -4,6 +4,7 @@ import Logo from "./Logo";
 import Menu from "./Menu";
 import Search from "./Search";
 import UserMenu from "./UserMenu";
+import Navigation from "./Navigation";
 
 
 const Header: React.FC = () => {
@@ -12,6 +13,7 @@ const Header: React.FC = () => {
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <Logo />
+                    <Navigation />
                     <div className="flex items-center space-x-4">
                         <Search />
                         <UserMenu />
@@ -20,7 +22,7 @@ const Header: React.FC = () => {
             </div>
             <Menu />
         </header>
-    )
+    );
 }
 
 export default Header;

@@ -5,7 +5,7 @@ const UserMenu: React.FC = () => {
         <div className="flex items-center space-x-4">
             a
         </div>
-    )
+    );
 }
 
 export default UserMenu;

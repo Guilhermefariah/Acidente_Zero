@@ -33,7 +33,8 @@ acidente-zero/
 │ │   ├── Logo.tsx
 │ │   ├── Menu.tsx
 │ │   ├── Search.tsx
-│ │   └──
+│ │   ├── UserMenu.tsx
+│ │   └── Navigation.tsx
 │ │   
 │ ├── Footer.tsx
 │ ├── ReportForm.tsx
