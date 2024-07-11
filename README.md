@@ -19,51 +19,58 @@ O projeto **Acidente Zero** é um painel para relatar problemas na cidade relaci
 ```sh
 acidente-zero/
 ├── public/
-│ │   ├──img/
-│ │   │  ├── logo.png
-│ ├── favicon.ico
-│ ├── vercel.svg
-│ └── ...
+│   ├── img/
+│   │   └── logo.png
+│   ├── favicon.ico
+│   └── vercel.svg
+├── app/
+│   ├── favicon.ico
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
 ├── src/
-│ │ ├── index.tsx
-│ │ └── globals.css
-│ ├── components/
-│ ├── Header/
-│ │   ├── Header.tsx
-│ │   ├── Logo.tsx
-│ │   ├── Menu.tsx
-│ │   ├── Search.tsx
-│ │   ├── UserMenu.tsx
-│ │   └── Navigation.tsx
-│ │   
-│ ├── Footer.tsx
-│ ├── ReportForm.tsx
-│ └── ...
-│ ├── pages/
-│ │ ├── api/
-│ │ │ ├── reports.ts
-│ │ │ └── ...
-│ │ ├── report.tsx
-│ │ └── ...
-│ ├── styles/
-│ │ ├── globals.css
-│ │ └── tailwind.css
-│ ├── utils/
-│ │ ├── db.ts
-│ │ └── ...
-│ ├── models/
-│ │ ├── Report.ts
-│ │ └── ...
-│ ├── hooks/
-│ │ ├── useReports.ts
-│ │ └── ...
-│ └── ...
+│   ├── components/
+│   │   ├── Header/
+│   │   │   ├── Header.tsx
+│   │   │   ├── Logo.tsx
+│   │   │   ├── Menu.tsx
+│   │   │   ├── Search.tsx
+│   │   │   ├── UserMenu.tsx
+│   │   │   └── Navigation.tsx
+│   │   ├── Footer/
+│   │   │   └── Footer.tsx
+│   │   ├── ReportForm.tsx
+│   │   └── ...
+│   ├── pages/
+│   │   ├── api/
+│   │   │   └── reports.ts
+│   │   ├── report.tsx
+│   │   └── ...
+│   ├── styles/
+│   │   ├── globals.css
+│   │   └── tailwind.css
+│   ├── utils/
+│   │   ├── db.ts
+│   │   └── ...
+│   ├── services/
+│   │   ├── Footer/
+│   │   ├── Header/
+│   │   └── ...
+│   ├── models/
+│   │   ├── Report.ts
+│   │   └── ...
+│   ├── hooks/
+│   │   ├── useReports.ts
+│   │   └── ...
+│   └── index.tsx
 ├── tests/
-│ ├── components/
-│ │ ├── Header.test.tsx
-│ │ ├── Footer.test.tsx
-│ │ └── ...
-│ └── ...
+│   ├── test_components/
+│   │   ├── Footer/
+│   │   │   └── Footer.test.tsx
+│   │   └── Header/
+│   │       └── Header.test.tsx
+│   └── test_pages/
+│       └── ...
 ├── .eslintrc.json
 ├── .gitignore
 ├── jest.config.js
