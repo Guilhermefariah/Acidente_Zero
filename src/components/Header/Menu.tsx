@@ -5,6 +5,6 @@ const Menu: React.FC = () => {
         <div className="hidden md:flex items-center space-x-4">
             a
         </div>
-    )
+    );
 }
 export default Menu;
