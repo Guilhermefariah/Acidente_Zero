@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Menu: React.FC = () => {
-
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -18,7 +17,7 @@ const Menu: React.FC = () => {
                 Menu
             </button>
             {isOpen && (
-                <div className="flex flex-col items-center md:items-start bg-gray-100 space-y-4 py-4">
+                <div className="flex flex-col md:flex-row md:justify-between items-center md:items-start bg-gray-100 space-y-4 md:space-y-0 md:space-x-4 py-4">
                     <Link href="/Novidades" className="text-gray-600 font-serif hover:text-gray-900">Novidades</Link>
                     <Link href="/Eventos" className="text-gray-600 font-serif hover:text-gray-900">Eventos</Link>
                     <Link href="/Apoio" className="text-gray-600 font-serif hover:text-gray-900">Apoio</Link>
@@ -35,4 +34,5 @@ const Menu: React.FC = () => {
         </div>
     );
 }
+
 export default Menu;
