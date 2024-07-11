@@ -1,4 +1,5 @@
 import React from "react";
+import { FiSearch } from "react-icons/fi";
 
 const Search: React.FC = () => {
     return (
@@ -6,10 +7,10 @@ const Search: React.FC = () => {
             <input 
                 type="text"
                 placeholder="Pesquisar..."
-                className="px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:border-blue-500"
+                className="px-3 py-2 pl-10 border border-gray-200 font-serif rounded-md focus:outline-none focus:border-gray-600"
             />
-            <button className="absolute right-0 top-0 mt-2 mr-2">
-                
+            <button className="absolute left-0 top-0 h-full flex items-center pl-2 text-gray-600">
+                <FiSearch size={20}/>
             </button>
         </div>
     );
