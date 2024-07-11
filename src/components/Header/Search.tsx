@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 
 const Search: React.FC = () => {
     return (
-        <div className="relative">
+        <div className="relative flex items-center">
             <input 
                 type="text"
                 placeholder="Pesquisar..."
