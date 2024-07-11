@@ -25,6 +25,8 @@ acidente-zero/
 │ ├── vercel.svg
 │ └── ...
 ├── src/
+│ │ ├── index.tsx
+│ │ └── globals.css
 │ ├── components/
 │ ├── Header/
 │ │   ├── Header.tsx
@@ -41,7 +43,6 @@ acidente-zero/
 │ │ ├── api/
 │ │ │ ├── reports.ts
 │ │ │ └── ...
-│ │ ├── index.tsx
 │ │ ├── report.tsx
 │ │ └── ...
 │ ├── styles/

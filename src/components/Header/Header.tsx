@@ -8,12 +8,12 @@ import Navigation from "./Navigation";
 
 const Header: React.FC = () => {
     return (
-        <header className="">
-            <div className="container mx-auto">
+        <header className="bg-gray-200 shadow-md">
+            <div className="container mx-auto py-4">
                 <div className="flex justify-between items-center">
                     <Logo />
                     <Navigation />
-                    <div className="flex items-center space-x-4">
+                    <div className="hidden md:flex items-center space-x-4">
                         <Search />
                         <UserMenu />
                     </div>
