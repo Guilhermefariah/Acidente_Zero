@@ -1,5 +1,4 @@
 import React from "react";
-import styles from './styles/Header.module.css';
 import Logo from "./Logo";
 import Menu from "./Menu";
 import Search from "./Search";
@@ -9,7 +8,7 @@ import Navigation from "./Navigation";
 
 const Header: React.FC = () => {
     return (
-        <header className={styles.header}>
+        <header className="">
             <div className="container mx-auto">
                 <div className="flex justify-between items-center">
                     <Logo />

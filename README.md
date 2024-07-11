@@ -27,8 +27,6 @@ acidente-zero/
 ├── src/
 │ ├── components/
 │ ├── Header/
-│ │   ├── styles/
-│ │   │   └── Header.module.css
 │ │   ├── Header.tsx
 │ │   ├── Logo.tsx
 │ │   ├── Menu.tsx
