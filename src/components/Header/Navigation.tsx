@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const Navigation: React.FC = () => {
     return (
-        <nav className="flex items-center">
-            <ul className="flex space-x-4">
+        <nav className="flex flex-col md:flex-row items-center mt-2 md:mt-0">
+            <ul className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4">
                 <li>
                     <Link href="/" className="text-gray-600 font-serif hover:text-gray-900">Início</Link>
                 </li>
