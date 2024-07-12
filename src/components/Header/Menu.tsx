@@ -4,14 +4,14 @@ import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Menu: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const toggleMenu = () => {
+    const isMenuOpen = () => {
         setIsOpen(!isOpen);
     }
 
     return (
         <div className="w-full">
             <button
-                onClick={toggleMenu}
+                onClick={isMenuOpen}
                 className="w-full flex justify-between items-center bg-gray-200 px-4 py-2 text-left text-xl text-gray-600 font-serif hover:text-gray-900 focus:outline-none focus:bg-gray-300 md:hidden hover:underline"
             >
                 Menu
