@@ -16,7 +16,8 @@ const UserMenu: React.FC = () => {
             </div>
             <span className="font-serif text-gray-600 text-base">Guilherme Faria</span>
             <button aria-label="Notification" className="relative">
-                <FiBell size={30} />
+                <FiBell size={30} className="text-gray-600" />
+                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"> </span>
             </button>
         </div>
     );
