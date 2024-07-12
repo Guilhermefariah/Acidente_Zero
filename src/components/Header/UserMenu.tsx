@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect, } from "react";
 import Image from "next/image";
 import { FiBell, FiUser } from "react-icons/fi";
 
 const UserMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
+    const menuRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const clickOutside = (event: MouseEvent) => {
+            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+                setMenuOpen(false);
+            }
+        }
+        document.addEventListener('mousedown', clickOutside);
+
+        return () => {
+            document.removeEventListener("mousedown", clickOutside);
+        };
+    }, []);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -25,7 +39,7 @@ const UserMenu: React.FC = () => {
                 <FiBell size={30} className="text-gray-600" />
                 <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"> </span>
             </button>
-            <div className="relative flex items-center">
+            <div ref={menuRef} className="relative flex items-center">
                 <button onClick={toggleMenu} className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
                     <FiUser size={30} className="text-gray-600" />
                     <span className="hidden md:block">Perfil</span>
