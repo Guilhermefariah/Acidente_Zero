@@ -2,6 +2,10 @@
 import Head from "next/head";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import dynamic from "next/dynamic";
+import "leaflet/dist/leaflet";
+
+const Map = dynamic(() => import('@/components/Map/Map'), { ssr: false });
 
 export default function Home() {
     return (
@@ -11,8 +15,8 @@ export default function Home() {
                 <link rel="icon" href="/favicon.icon" />
             </Head>
             <Header />
-            <main className="container mx-auto">
-                {/* Conteúdo da página */}
+            <main>
+                <Map />
             </main>
             <Footer />
         </div>

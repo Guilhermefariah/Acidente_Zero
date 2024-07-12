@@ -39,6 +39,8 @@ acidente-zero/
 │   │   │   └── Navigation.tsx
 │   │   ├── Footer/
 │   │   │   └── Footer.tsx
+│   │   ├── Map/
+│   │   │   └── Map.tsx
 │   │   ├── ReportForm.tsx
 │   │   └── ...
 │   ├── pages/
@@ -79,6 +81,7 @@ acidente-zero/
 ├── tailwind.config.js
 ├── tsconfig.json
 └── README.md
+
 ```
 
 
