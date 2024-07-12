@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { FiBell } from "react-icons/fi";
+import { FiBell, FiUser } from "react-icons/fi";
 
 const UserMenu: React.FC = () => {
     return (
@@ -19,6 +19,12 @@ const UserMenu: React.FC = () => {
                 <FiBell size={30} className="text-gray-600" />
                 <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"> </span>
             </button>
+            <div className="relative flex items-center">
+                <button className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
+                    <FiUser size={30} className="text-gray-600" />
+                    <span className="hidden md:block">Perfil</span>
+                </button>
+            </div>
         </div>
     );
 }
