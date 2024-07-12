@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { FiBell } from "react-icons/fi";
 
 const UserMenu: React.FC = () => {
     return (
@@ -13,7 +14,10 @@ const UserMenu: React.FC = () => {
                     className="rounded-full"
                 />
             </div>
-            <span className="font-serif text-gray-600">Guilherme Faria</span>
+            <span className="font-serif text-gray-600 text-base">Guilherme Faria</span>
+            <button aria-label="Notification" className="relative">
+                <FiBell size={30} />
+            </button>
         </div>
     );
 }
