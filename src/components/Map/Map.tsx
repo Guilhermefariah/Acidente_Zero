@@ -33,7 +33,7 @@ const Map = () => {
                     position: event.latlng,
                     id: Math.random()
                 }
-                setMarkers([...markers, newMarker]);
+                setMarkers(prevMarkers => [...prevMarkers, newMarker]);
             }
         });
         return null;
@@ -50,7 +50,7 @@ const Map = () => {
                     position: event.latlng,
                     id: Math.random()
                 }
-                setMarkers([...markers, newMarker]);
+                setMarkers(prevMarkers => [...prevMarkers, newMarker]);
             });
         }
 
