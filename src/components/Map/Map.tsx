@@ -14,6 +14,10 @@ const Map = () => {
         setMarkers([]);
     }
 
+    const saveMarkers = () => {
+        console.log("Marcadores salvos:", markers);
+    }
+
     const AddMarker = () => {
         useMapEvents({
             click(event) {
@@ -42,7 +46,7 @@ const Map = () => {
             <AddMarker />
             <div>
                 <button onClick={clearMarkers}>Limpar Marcadores</button>
-                <button>Salar Marcadores</button>
+                <button onClick={saveMarkers}>Salvar Marcadores</button>
             </div>
             {markers.map(marker => (
                 <Marker key={marker.id} position={marker.position} icon={markerIcon}>
