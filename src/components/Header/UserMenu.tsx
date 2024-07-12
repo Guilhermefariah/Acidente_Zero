@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, } from "react";
+import React, { useState, useRef, useEffect, useCallback, } from "react";
 import { FiBell, FiUser } from "react-icons/fi";
 
 const UserMenu: React.FC = () => {
@@ -18,9 +18,9 @@ const UserMenu: React.FC = () => {
         };
     }, []);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    }
+    const toggleMenu = useCallback(() => {
+        setMenuOpen(prev => !prev);
+    }, []);
 
     return (
         <div className="relative flex items-center space-x-4">
