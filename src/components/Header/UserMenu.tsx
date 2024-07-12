@@ -16,7 +16,7 @@ const UserMenu: React.FC = () => {
         return () => {
             document.removeEventListener("mousedown", clickOutside);
         };
-    }, []);
+    }, [menuOpen]);
 
     const clickMenu = useCallback(() => {
         setMenuOpen(prev => !prev);
