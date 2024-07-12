@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const Menu: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,14 +19,6 @@ const Menu: React.FC = () => {
                 <Link href="/Novidades" className="block text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Novidades</Link>
                 <Link href="/Eventos" className="block text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Eventos</Link>
                 <Link href="/Apoio" className="block text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Apoio</Link>
-                <div className="flex space-x-4">
-                    <a href="https://github.com/Guilhermefariah" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
-                        <FiGithub size={24} />
-                    </a>
-                    <a href="https://www.linkedin.com/in/-guilherme-faria/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gray-900">
-                        <FiLinkedin size={24} />
-                    </a>
-                </div>
             </div>
         </div>
     );
