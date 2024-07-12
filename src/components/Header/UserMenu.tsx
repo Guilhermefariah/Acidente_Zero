@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useCallback, } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { FiBell, FiUser } from "react-icons/fi";
 
 const UserMenu: React.FC = () => {
@@ -16,7 +16,7 @@ const UserMenu: React.FC = () => {
         return () => {
             document.removeEventListener("mousedown", clickOutside);
         };
-    }, [menuOpen]);
+    }, []);
 
     const clickMenu = useCallback(() => {
         setMenuOpen(prev => !prev);
@@ -26,7 +26,7 @@ const UserMenu: React.FC = () => {
         <div className="relative flex items-center space-x-4">
             <button aria-label="Notification" className="relative">
                 <FiBell size={30} className="text-gray-600" />
-                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"> </span>
+                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
             </button>
             <div ref={menuRef} className="relative flex items-center">
                 <button onClick={clickMenu} className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
@@ -35,7 +35,7 @@ const UserMenu: React.FC = () => {
                 </button>
                 {menuOpen && (
                     <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg py-0 flex flex-col">
-                        <a href="/profie" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Perfil</a>
+                        <a href="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Perfil</a>
                         <a href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Configuração</a>
                         <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Sair</button>
                     </div>
