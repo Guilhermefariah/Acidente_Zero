@@ -43,29 +43,21 @@ const Map = () => {
         anchor: new window.google.maps.Point(12, 41),
     }
 
-    const LocateButton = () => {
-        const useLocate = () => {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition((position) => {
-                    const newMarker: MarkerType = {
-                        position: {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude,
-                        },
-                        id: Math.random(),
-                    };
-                    setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
-                });
-            } else {
-                alert("Geolocalização não suportada neste navegador.");
-            }
+    const useLocate = () => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                const newMarker: MarkerType = {
+                    position: {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude,
+                    },
+                    id: Math.random(),
+                };
+                setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
+            });
+        } else {
+            alert("Geolocalização não suportada neste navegador.");
         }
-
-        return (
-            <button className="bg-gray-500 text-white py-2 px-4 rounded ml-2 mt-2 hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110" onClick={useLocate}>
-                Minha Localização
-            </button>
-        );
     }
 
     return (
@@ -97,13 +89,24 @@ const Map = () => {
                 </GoogleMap>
             </div>
             <div className="text-start mt-2 flex flex-wrap gap-2 sm:gap-4 lg:gap-6">
-                <button className="bg-gray-700 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" onClick={clearMarkers}>
+                <button 
+                    className="bg-gray-700 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" 
+                    onClick={clearMarkers}
+                >
                     Limpar
                 </button>
-                <button className="bg-gray-500 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" onClick={saveMarkers}>
+                <button 
+                    className="bg-gray-500 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" 
+                    onClick={saveMarkers}
+                >
                     Salvar
                 </button>
-                <LocateButton />
+                <button 
+                    className="bg-gray-500 text-white py-2 px-4 rounded ml-2 mt-2 hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110" 
+                    onClick={useLocate}
+                >
+                    Minha Localização
+                </button>
             </div>
         </div>
     )
