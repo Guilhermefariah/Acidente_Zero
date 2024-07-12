@@ -13,6 +13,7 @@ const UserMenu: React.FC = () => {
                     className="rounded-full"
                 />
             </div>
+            <span className="font-serif text-gray-600">Guilherme Faria</span>
         </div>
     );
 }
