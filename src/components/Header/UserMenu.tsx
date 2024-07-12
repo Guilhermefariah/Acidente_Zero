@@ -18,7 +18,7 @@ const UserMenu: React.FC = () => {
         };
     }, []);
 
-    const toggleMenu = useCallback(() => {
+    const clickMenu = useCallback(() => {
         setMenuOpen(prev => !prev);
     }, []);
 
@@ -29,7 +29,7 @@ const UserMenu: React.FC = () => {
                 <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"> </span>
             </button>
             <div ref={menuRef} className="relative flex items-center">
-                <button onClick={toggleMenu} className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
+                <button onClick={clickMenu} className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
                     <FiUser size={30} className="text-gray-600" />
                     <span className="hidden md:block">Perfil</span>
                 </button>
