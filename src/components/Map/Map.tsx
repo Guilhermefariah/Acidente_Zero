@@ -36,6 +36,10 @@ const Map = () => {
                 attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>Acidente Zero</a> contributors"
             />
             <AddMarker />
+            <div>
+                <button>Limpar Marcadores</button>
+                <button>Salar Marcadores</button>
+            </div>
             {markers.map(marker => (
                 <Marker key={marker.id} position={marker.position} icon={markerIcon}>
                     <Popup>
