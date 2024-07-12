@@ -24,6 +24,11 @@ const UserMenu: React.FC = () => {
                     <FiUser size={30} className="text-gray-600" />
                     <span className="hidden md:block">Perfil</span>
                 </button>
+                <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg py-0 flex flex-col">
+                    <a href="/profie" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Perfil</a>
+                    <a href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Configuração</a>
+                    <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Sair</button>
+                </div>
             </div>
         </div>
     );
