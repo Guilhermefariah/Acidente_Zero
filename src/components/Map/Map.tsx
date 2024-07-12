@@ -10,6 +10,10 @@ interface MarkerType {
 const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
 
+    const clearMarkers = () => {
+        setMarkers([]);
+    }
+
     const AddMarker = () => {
         useMapEvents({
             click(event) {
@@ -37,7 +41,7 @@ const Map = () => {
             />
             <AddMarker />
             <div>
-                <button>Limpar Marcadores</button>
+                <button onClick={clearMarkers}>Limpar Marcadores</button>
                 <button>Salar Marcadores</button>
             </div>
             {markers.map(marker => (
