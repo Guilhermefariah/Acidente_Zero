@@ -8,6 +8,13 @@ interface MarkerType {
     id: number;
 }
 
+const markerIcon = new L.Icon({
+    iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+    iconSize: [25, 41],
+    iconAnchor: [12, 41],
+    popupAnchor: [1, -34],
+});
+
 const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
 
@@ -53,13 +60,6 @@ const Map = () => {
             </button>
         );
     }
-
-    const markerIcon = new L.Icon({
-        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-    });
 
     return (
         <div className="bg-gray-100 p-4">
