@@ -5,7 +5,6 @@ import Footer from "@/components/Footer/Footer";
 import dynamic from 'next/dynamic';
 import 'leaflet/dist/leaflet.css';
 
-
 const Map = dynamic(() => import('@/components/Map/Map'), { ssr: false });
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <main>
+            <main className="flex-grow">
                 <Map />
             </main>
             <Footer />
