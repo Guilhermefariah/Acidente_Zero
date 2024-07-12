@@ -7,14 +7,13 @@ interface MarkerType {
     id: number;
 }
 
-
 const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
 
     const AddMarker = () => {
         useMapEvents({
             click(events) {
-                const newMarker: MarkerType	= {
+                const newMarker: MarkerType = {
                     position: events.latlng,
                     id: Math.random()
                 }
@@ -24,6 +23,13 @@ const Map = () => {
         return null;
     }
 
+    const markerIcon = new L.Icon({
+        iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+    });
+
     return (
         <MapContainer center={[-23.257046, -46.739705]} zoom={13} style={{ height: "500px", width: "100%" }} >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -31,7 +37,7 @@ const Map = () => {
             />
             <AddMarker />
             {markers.map(marker => (
-                <Marker key={marker.id} position={marker.position}>
+                <Marker key={marker.id} position={marker.position} icon={markerIcon}>
                     <Popup>
                         Problema relatado.
                     </Popup>
