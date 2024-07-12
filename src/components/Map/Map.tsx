@@ -12,9 +12,9 @@ const Map = () => {
 
     const AddMarker = () => {
         useMapEvents({
-            click(events) {
+            click(event) {
                 const newMarker: MarkerType = {
-                    position: events.latlng,
+                    position: event.latlng,
                     id: Math.random()
                 }
                 setMarkers([...markers, newMarker]);
@@ -31,9 +31,9 @@ const Map = () => {
     });
 
     return (
-        <MapContainer center={[-23.257046, -46.739705]} zoom={13} style={{ height: "500px", width: "100%" }} >
+        <MapContainer center={[-23.257046, -46.739705]} zoom={13} style={{ height: "500px", width: "100%" }}>
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                attribution="&copy;<a href='https://www.openstreetmap.org/copyright'>Acidente Zero</a> contributors"
+                attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>Acidente Zero</a> contributors"
             />
             <AddMarker />
             {markers.map(marker => (
