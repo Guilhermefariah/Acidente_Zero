@@ -26,18 +26,18 @@ const UserMenu: React.FC = () => {
         <div className="relative flex items-center space-x-4">
             <button aria-label="Notification" className="relative">
                 <Image 
-                    src="/notification-icon.png" 
+                    src="/img/notification.png" 
                     alt="Notification" 
                     width={30} 
                     height={30} 
                     className="text-gray-600" 
                 />
-                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-gray-600 rounded-full"></span>
+                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
             </button>
             <div ref={menuRef} className="relative flex items-center">
                 <button onClick={clickMenu} className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
                     <Image 
-                        src="/user-icon.png" 
+                        src="/img/user-icon.png" 
                         alt="User" 
                         width={30} 
                         height={30} 

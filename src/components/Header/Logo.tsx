@@ -1,10 +1,16 @@
 import React from "react";
-import { FaTrafficLight } from "react-icons/fa";
+import Image from "next/image";
 
 const Logo: React.FC = () => {
     return (
         <div className="flex items-center">
-            <FaTrafficLight size={50} className="text-gray-600 w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20" />
+            <Image
+                src="/img/logo.png"
+                alt="Logo"
+                width={20}
+                height={20}
+                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 lg:w-16 lg:h-16"
+            />
         </div>
     );
 }
