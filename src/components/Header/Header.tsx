@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const pageTitle = "Acidente Zero";
 
   return (
-    <header className="bg-gray-200 shadow-lg">
+    <header className="bg-gradient-to-r from-gray-300 to-gray-500 shadow-lg">
       <Navigation />
       <div className="flex flex-col md:flex-row items-center justify-between px-4 py-2 space-y-2 md:space-y-0">
         <div className="flex items-center space-x-2">
