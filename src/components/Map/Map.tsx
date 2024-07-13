@@ -38,9 +38,9 @@ const Map = () => {
 
     const markerIcon = {
         url: '/img/marker.png',
-        scaledSize: new window.google.maps.Size(25, 41),
+        scaledSize: new window.google.maps.Size(50, 50),
         origin: new window.google.maps.Point(0, 0),
-        anchor: new window.google.maps.Point(12, 41),
+        anchor: new window.google.maps.Point(25, 50),
     }
 
     const useLocate = () => {
