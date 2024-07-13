@@ -11,7 +11,7 @@ const Navigation: React.FC = () => {
     }
 
     return (
-        <nav className="flex flex-col md:flex-row items-center mt-2 md:mt-0">
+        <nav className="flex flex-col md:flex-row items-start mt-2 md:mt-0">
             <div className="md:hidden flex justify-end w-full p-2">
                 <button onClick={clickMenu}>
                     {isOpen ? (
