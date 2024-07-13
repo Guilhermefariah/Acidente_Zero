@@ -61,6 +61,9 @@ const Map = () => {
         }
     }
 
+    const reportProblem = () => {
+        setShowModal(true);
+    }
 
     return (
         <div className="bg-gray-100 p-4">
