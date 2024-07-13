@@ -38,10 +38,10 @@ const Map = () => {
 
     const markerIcon = {
         url: '/img/marker.png',
-        scaledSize: new window.google.maps.Size(50, 50),
-        origin: new window.google.maps.Point(0, 0),
-        anchor: new window.google.maps.Point(25, 50),
-    }
+        scaledSize: window.google?.maps.Size ? new window.google.maps.Size(50, 50) : undefined,
+        origin: window.google?.maps.Point ? new window.google.maps.Point(0, 0) : undefined,
+        anchor: window.google?.maps.Point ? new window.google.maps.Point(25, 50) : undefined,
+    };
 
     const useLocate = () => {
         if (navigator.geolocation) {
