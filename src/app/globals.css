@@ -32,12 +32,3 @@ body {
     text-wrap: balance;
   }
 }
-
-.leaflet-marker-icon {
-  transition: transform 0.3s ease-in-out;
-}
-
-.leaflet-marker-icon:hover {
-  transform: scale(1.3);
-}
-
