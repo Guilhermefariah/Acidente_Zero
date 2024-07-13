@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import Modal from "./Modal";
 
+
 interface MarkerType {
     position: google.maps.LatLngLiteral;
     id: number;
@@ -66,6 +67,10 @@ const Map = () => {
         setShowModal(true);
     }
 
+    const confirmReport = () => {
+        setShowModal(false);
+    }
+
     return (
         <div className="bg-gray-100 p-4">
             <div className="border-2 border-gray-500 relative">
@@ -81,8 +86,8 @@ const Map = () => {
                             position={marker.position}
                             icon={markerIcon}
                             onClick={() => {
-                            setSelectedMarker(marker)
-                            reportProblem();
+                                setSelectedMarker(marker)
+                                reportProblem();
                             }}
                         >
                             {selectedMarker && selectedMarker.id === marker.id && (
@@ -98,27 +103,33 @@ const Map = () => {
                 </GoogleMap>
             </div>
             <div className="text-start mt-2 flex flex-wrap gap-2 sm:gap-4 lg:gap-6">
-                <button 
-                    className="bg-gray-700 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" 
+                <button
+                    className="bg-gray-700 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
                     onClick={clearMarkers}
                 >
                     Limpar
                 </button>
-                <button 
-                    className="bg-gray-500 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" 
+                <button
+                    className="bg-gray-500 text-gray-100 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
                     onClick={saveMarkers}
                 >
                     Salvar
                 </button>
-                <button 
-                    className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" 
+                <button
+                    className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
                     onClick={useLocate}
                 >
                     Minha Localização
                 </button>
             </div>
             {/* {showModal && (
-
+                <Modal
+                    title="Confirmar Relato de Problema"
+                    onClose={() => setShowModal(false)}
+                    onConfirm={confirmReport}
+                >
+                    <p>Deseja relatar o problema?</p>
+                </Modal>
             )} */}
         </div>
     )
