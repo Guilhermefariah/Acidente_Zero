@@ -9,6 +9,7 @@ interface MarkerType {
 const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
     const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
+    const [showModal, setShowModal] = useState(false);
 
     const clearMarkers = () => {
         setMarkers([]);
@@ -59,6 +60,7 @@ const Map = () => {
             alert("Geolocalização não suportada neste navegador.");
         }
     }
+
 
     return (
         <div className="bg-gray-100 p-4">
