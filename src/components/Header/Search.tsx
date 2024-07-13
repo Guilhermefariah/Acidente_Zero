@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { FiSearch } from "react-icons/fi";
+import Image from 'next/image';
 
 const Search: React.FC = () => {
     const inputRef = useRef<HTMLInputElement>(null);
@@ -23,7 +23,7 @@ const Search: React.FC = () => {
                 onClick={iconClick}
                 className="absolute left-0 top-0 h-full flex items-center pl-2 text-gray-900"
             >
-                <FiSearch size={20}/>
+                <Image src="/img/search.png" alt="Search" width={25} height={25}/>
             </button>
         </div>
     );
