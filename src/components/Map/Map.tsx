@@ -122,7 +122,7 @@ const Map = () => {
                     Minha Localização
                 </button>
             </div>
-            {/* {showModal && (
+            {showModal && (
                 <Modal
                     title="Confirmar Relato de Problema"
                     onClose={() => setShowModal(false)}
@@ -130,7 +130,7 @@ const Map = () => {
                 >
                     <p>Deseja relatar o problema?</p>
                 </Modal>
-            )} */}
+            )}
         </div>
     )
 }
