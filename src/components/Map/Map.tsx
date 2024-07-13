@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
+import Modal from "./Modal";
 
 interface MarkerType {
     position: google.maps.LatLngLiteral;
