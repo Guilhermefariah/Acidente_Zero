@@ -102,7 +102,7 @@ const Map = () => {
                     Salvar
                 </button>
                 <button 
-                    className="bg-gray-500 text-white py-2 px-4 rounded ml-2 mt-2 hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110" 
+                    className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3" 
                     onClick={useLocate}
                 >
                     Minha Localização
