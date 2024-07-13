@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Navigation: React.FC = () => {
-
     const [isOpen, setIsOpen] = useState(false);
 
     const clickMenu = () => {
@@ -22,18 +21,13 @@ const Navigation: React.FC = () => {
                 </button>
             </div>
             <ul className={`flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 ${isOpen ? 'flex' : 'hidden'} md:flex`}>
-                <li>
-                    <Link href="/" className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Início</Link>
-                </li>
-                <li>
-                    <Link href="/about" className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Sobre</Link>
-                </li>
-                <li>
-                    <Link href="/report" className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Relatar</Link>
-                </li>
-                <li>
-                    <Link href="/contact" className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">Contato</Link>
-                </li>
+                {['Início', 'Sobre', 'Relatar', 'Contato'].map((item, index) => (
+                    <li key={index}>
+                        <Link href={`/${item.toLowerCase()}`} className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">
+                            {item}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
     );
