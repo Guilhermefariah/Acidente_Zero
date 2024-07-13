@@ -79,7 +79,10 @@ const Map = () => {
                             key={marker.id}
                             position={marker.position}
                             icon={markerIcon}
-                            onClick={() => setSelectedMarker(marker)}
+                            onClick={() => {
+                            setSelectedMarker(marker)
+                            reportProblem();
+                            }}
                         >
                             {selectedMarker && selectedMarker.id === marker.id && (
                                 <InfoWindow
