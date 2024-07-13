@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
-import { FiBell, FiUser } from "react-icons/fi";
+import Image from 'next/image';
 
 const UserMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +15,7 @@ const UserMenu: React.FC = () => {
 
         return () => {
             document.removeEventListener("mousedown", clickOutside);
-        };
+        }
     }, []);
 
     const clickMenu = useCallback(() => {
@@ -25,12 +25,24 @@ const UserMenu: React.FC = () => {
     return (
         <div className="relative flex items-center space-x-4">
             <button aria-label="Notification" className="relative">
-                <FiBell size={30} className="text-gray-600" />
-                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
+                <Image 
+                    src="/notification-icon.png" 
+                    alt="Notification" 
+                    width={30} 
+                    height={30} 
+                    className="text-gray-600" 
+                />
+                <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-gray-600 rounded-full"></span>
             </button>
             <div ref={menuRef} className="relative flex items-center">
                 <button onClick={clickMenu} className="flex items-center space-x-2 focus:outline-none" aria-label="User Menu">
-                    <FiUser size={30} className="text-gray-600" />
+                    <Image 
+                        src="/user-icon.png" 
+                        alt="User" 
+                        width={30} 
+                        height={30} 
+                        className="text-gray-600" 
+                    />
                     <span className="hidden md:block">Perfil</span>
                 </button>
                 {menuOpen && (
