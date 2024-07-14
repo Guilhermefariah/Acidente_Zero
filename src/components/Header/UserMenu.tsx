@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import Image from 'next/image';
+import Link from "next/link";
 
 const UserMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -47,8 +48,8 @@ const UserMenu: React.FC = () => {
                 </button>
                 {menuOpen && (
                     <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg py-0 flex flex-col">
-                        <a href="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Perfil</a>
-                        <a href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Configuração</a>
+                        <Link href="/profile" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Perfil</Link>
+                        <Link href="/settings" className="block px-4 py-2 text-gray-700 hover:bg-gray-100">Configuração</Link>
                         <button className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100">Sair</button>
                     </div>
                 )}
