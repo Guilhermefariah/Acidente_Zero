@@ -14,9 +14,9 @@ const Navigation: React.FC = () => {
             <div className="md:hidden flex justify-end w-full p-2">
                 <button onClick={clickMenu}>
                     {isOpen ? (
-                        <Image src="/img/close.png" alt="Close Menu" width={15} height={15} />
+                        <Image src="/img/close.png" alt="Close Menu" width={30} height={30} />
                     ) : (
-                        <Image src="/img/menu.png" alt="Open Menu" width={25} height={25} />
+                        <Image src="/img/menu.png" alt="Open Menu" width={30} height={30} />
                     )}
                 </button>
             </div>
