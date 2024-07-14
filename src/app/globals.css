@@ -32,3 +32,22 @@ body {
     text-wrap: balance;
   }
 }
+
+.bg-gray-600 {
+  background-color: #4a5568;
+}
+.text-white {
+  color: #ffffff;
+}
+.p-6 {
+  padding: 1.5rem;
+}
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.hover\:bg-gray-800:hover {
+  background-color: #2d3748;
+}
