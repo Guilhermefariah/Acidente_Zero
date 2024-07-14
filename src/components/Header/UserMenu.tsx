@@ -29,8 +29,8 @@ const UserMenu: React.FC = () => {
                 <Image 
                     src="/img/notification.png" 
                     alt="Notification" 
-                    width={30} 
-                    height={30} 
+                    width={35} 
+                    height={35} 
                     className="text-gray-600" 
                 />
                 <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span>
@@ -40,11 +40,10 @@ const UserMenu: React.FC = () => {
                     <Image 
                         src="/img/user-icon.png" 
                         alt="User" 
-                        width={30} 
-                        height={30} 
+                        width={35} 
+                        height={35} 
                         className="text-gray-600" 
                     />
-                    <span className="hidden md:block">Perfil</span>
                 </button>
                 {menuOpen && (
                     <div className="absolute right-0 mt-2 w-48 bg-gray-200 rounded-md shadow-lg py-0 flex flex-col">
