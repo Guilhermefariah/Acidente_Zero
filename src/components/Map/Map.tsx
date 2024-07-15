@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/router';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import Modal from "./Modal";
 
