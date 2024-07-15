@@ -44,26 +44,11 @@ acidente-zero/
 │   │   ├── ReportForm.tsx
 │   │   └── ...
 │   ├── pages/
-│   │   ├── api/
-│   │   │   └── reports.ts
-│   │   ├── report.tsx
-│   │   └── ...
 │   ├── styles/
-│   │   ├── globals.css
-│   │   └── tailwind.css
 │   ├── utils/
-│   │   ├── db.ts
-│   │   └── ...
 │   ├── services/
-│   │   ├── Footer/
-│   │   ├── Header/
-│   │   └── ...
 │   ├── models/
-│   │   ├── Report.ts
-│   │   └── ...
 │   ├── hooks/
-│   │   ├── useReports.ts
-│   │   └── ...
 │   └── index.tsx
 ├── tests/
 │   ├── test_components/
@@ -81,7 +66,6 @@ acidente-zero/
 ├── tailwind.config.js
 ├── tsconfig.json
 └── README.md
-
 ```
 
 
