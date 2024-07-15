@@ -101,7 +101,6 @@ const Map = () => {
                                 </InfoWindow>
                             )}
                         </Marker>
-
                     ))}
                 </GoogleMap>
             </div>

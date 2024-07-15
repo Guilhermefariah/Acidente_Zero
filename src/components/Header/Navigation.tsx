@@ -23,7 +23,7 @@ const Navigation: React.FC = () => {
             <ul className={`flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 ${isOpen ? 'flex' : 'hidden'} md:flex`}>
                 {['Início', 'Sobre', 'Relatar', 'Cadastro'].map((item, index) => (
                     <li key={index}>
-                        <Link href={`/${item}`} className="text-gray-600 font-serif hover:text-gray-900 text-2xl hover:underline">
+                        <Link href={`/${item}`} className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">
                             {item}
                         </Link>
                     </li>
