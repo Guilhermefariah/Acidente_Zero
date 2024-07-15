@@ -41,8 +41,7 @@ acidente-zero/
 │   │   │   └── Footer.tsx
 │   │   ├── Map/
 │   │   │   ├── Map.tsx
-│   │   │   ├── Modal.tsx
-│   │   │   └── ReportForm.tsx
+│   │   │   └── Modal.tsx
 │   │   └── ...
 │   ├── pages/
 │   ├── styles/

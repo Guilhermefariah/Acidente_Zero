@@ -2,11 +2,8 @@ import { useState } from "react";
 import { useRouter } from 'next/navigation';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import Modal from "./Modal";
+import { MarkerType } from "@/models/MarkerType";
 
-interface MarkerType {
-    position: google.maps.LatLngLiteral;
-    id: number;
-}
 
 const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
