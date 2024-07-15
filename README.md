@@ -44,6 +44,8 @@ acidente-zero/
 │   │   ├── ReportForm.tsx
 │   │   └── ...
 │   ├── pages/
+│   │   ├── cadastro.tsx
+│   │   └── ...
 │   ├── styles/
 │   ├── utils/
 │   ├── services/
