@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import Modal from "./Modal";
 
@@ -70,7 +70,7 @@ const Map = () => {
 
     const confirmReport = () => {
         setShowModal(false);
-        router.push('/cadastro');
+        router.push('/Cadastro');
     }
 
     return (
