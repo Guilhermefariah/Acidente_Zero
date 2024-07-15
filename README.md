@@ -40,18 +40,17 @@ acidente-zero/
 │   │   ├── Footer/
 │   │   │   └── Footer.tsx
 │   │   ├── Map/
-│   │   │   └── Map.tsx
-│   │   ├── ReportForm.tsx
+│   │   │   ├── Map.tsx
+│   │   │   ├── Modal.tsx
+│   │   │   └── ReportForm.tsx
 │   │   └── ...
 │   ├── pages/
-│   │   ├── Cadastro.tsx
-│   │   └── ...
 │   ├── styles/
 │   ├── utils/
 │   ├── services/
 │   ├── models/
-│   ├── hooks/
-│   └── index.tsx
+│   ├── routes
+│   └── hooks/
 ├── tests/
 │   ├── test_components/
 │   │   ├── Footer/
