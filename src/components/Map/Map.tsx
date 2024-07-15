@@ -1,7 +1,7 @@
 import { useState } from "react";
+import { useRouter } from 'next/router';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import Modal from "./Modal";
-
 
 interface MarkerType {
     position: google.maps.LatLngLiteral;
@@ -12,6 +12,7 @@ const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
     const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
     const [showModal, setShowModal] = useState(false);
+    const router = useRouter();
 
     const clearMarkers = () => {
         setMarkers([]);
@@ -69,6 +70,7 @@ const Map = () => {
 
     const confirmReport = () => {
         setShowModal(false);
+        router.push('/cadastro');
     }
 
     return (
@@ -95,7 +97,7 @@ const Map = () => {
                                     position={marker.position}
                                     onCloseClick={() => setSelectedMarker(null)}
                                 >
-                                    <div>Problema relatado.</div>
+                                    {/* Problema relatado. */}
                                 </InfoWindow>
                             )}
                         </Marker>
