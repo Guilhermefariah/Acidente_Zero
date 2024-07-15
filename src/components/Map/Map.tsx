@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
 import Modal from "./Modal";
 
@@ -97,10 +97,11 @@ const Map = () => {
                                     position={marker.position}
                                     onCloseClick={() => setSelectedMarker(null)}
                                 >
-                                    {/* Problema relatado. */}
+                                    <div>Problema relatado.</div>
                                 </InfoWindow>
                             )}
                         </Marker>
+
                     ))}
                 </GoogleMap>
             </div>
