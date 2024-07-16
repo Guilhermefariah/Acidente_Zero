@@ -1,7 +1,8 @@
 import React from 'react';
+import { getCurrentYear } from '@/services/Footer/GetCurrentYear'; 
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = getCurrentYear();
 
   return (
     <footer className="bg-gray-200 text-gray-900 text-center font-serif py-2">
