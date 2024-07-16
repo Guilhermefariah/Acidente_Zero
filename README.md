@@ -44,11 +44,18 @@ acidente-zero/
 │   │   │   └── Modal.tsx
 │   │   └── ...
 │   ├── pages/
+│   │   ├── Header/
+│   │   │   ├── PageTitleProps.ts
+│   │   └── Map/
+│   │       ├── MarkerType.ts
+│   │       └── ModalProps.ts
 │   ├── styles/
 │   ├── utils/
 │   ├── services/
 │   ├── models/
 │   ├── routes
+│   │   └── Header/
+│   │       └── Menu.ts
 │   └── hooks/
 ├── tests/
 │   ├── test_components/
