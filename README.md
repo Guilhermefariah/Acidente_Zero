@@ -29,6 +29,7 @@ acidente-zero/
 │   ├── layout.tsx
 │   └── page.tsx
 ├── src/
+
 │   ├── components/
 │   │   ├── Header/
 │   │   │   ├── Header.tsx
