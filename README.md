@@ -55,11 +55,12 @@ acidente-zero/
 │   │       ├── Menu.ts
 │   │       ├── Navigation.ts
 │   │       └── UserMenuRoutes.ts
+│   ├── pages/
+│   │   ├── _app.tsx
+│   │   └── Cadastro.tsx
 │   ├── styles/
 │   ├── utils/
 │   ├── services/
-│   ├── pages/
-│   │   ├── _app.tsx
 │   └── hooks/
 ├── tests/
 │   ├── test_components/
