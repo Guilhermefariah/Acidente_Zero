@@ -55,7 +55,9 @@ acidente-zero/
 │   ├── models/
 │   ├── routes
 │   │   └── Header/
-│   │       └── Menu.ts
+│   │       ├── Menu.ts
+│   │       ├── Navigation.ts
+│   │       └── UserMenuRoutes.ts
 │   └── hooks/
 ├── tests/
 │   ├── test_components/
