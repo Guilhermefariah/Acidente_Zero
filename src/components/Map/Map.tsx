@@ -2,6 +2,7 @@ import React from 'react';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api';
 import Modal from './Modal';
 import useMap from '@/hooks/Map/useMap';
+import markerIcon from './MarkerIcon';
 
 const Map = () => {
     const {
@@ -24,13 +25,6 @@ const Map = () => {
 
     if (loadError) return <div>Erro ao carregar o mapa</div>;
     if (!isLoaded) return <div>Loading mapa...</div>;
-
-    const markerIcon = {
-        url: '/img/marker.png',
-        scaledSize: window.google?.maps.Size ? new window.google.maps.Size(50, 50) : undefined,
-        origin: window.google?.maps.Point ? new window.google.maps.Point(0, 0) : undefined,
-        anchor: window.google?.maps.Point ? new window.google.maps.Point(25, 50) : undefined,
-    }
 
     return (
         <div className="bg-gray-100 p-4">
