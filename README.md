@@ -58,8 +58,7 @@ acidente-zero/
 │   ├── utils/
 │   ├── services/
 │   ├── pages/
-│   │   ├── Cadastro.tsx
-│   │   └── _app.tsx
+│   │   ├── _app.tsx
 │   └── hooks/
 ├── tests/
 │   ├── test_components/
