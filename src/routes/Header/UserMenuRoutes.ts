@@ -1,4 +1,4 @@
 export const userMenuRoutes = {
-    profile: "/profile",
-    settings: "/settings"
+    perfil: "/profile",
+    configuração: "/settings"
 };
