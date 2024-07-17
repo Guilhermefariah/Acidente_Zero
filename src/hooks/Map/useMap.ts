@@ -20,7 +20,7 @@ const useMap = () => {
         } catch (error) {
             console.error('Erro ao buscar marcadores:', error);
         }
-    }
+    };
 
     const clearMarkers = async () => {
         try {
@@ -30,7 +30,7 @@ const useMap = () => {
         } catch (error) {
             console.error('Erro ao limpar marcadores:', error);
         }
-    }
+    };
 
     const saveMarkers = async () => {
         try {
@@ -47,7 +47,7 @@ const useMap = () => {
         } catch (error) {
             console.error('Erro ao salvar marcadores:', error);
         }
-    }
+    };
 
     const onMapClick = (event: google.maps.MapMouseEvent) => {
         if (event.latLng) {
@@ -57,7 +57,7 @@ const useMap = () => {
             };
             setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
         }
-    }
+    };
 
     const useLocate = () => {
         if (navigator.geolocation) {
@@ -74,16 +74,16 @@ const useMap = () => {
         } else {
             alert('Geolocalização não suportada neste navegador.');
         }
-    }
+    };
 
     const reportProblem = () => {
         setShowModal(true);
-    }
+    };
 
     const confirmReport = () => {
         setShowModal(false);
         router.push('#');
-    }
+    };
 
     return {
         markers,
@@ -97,7 +97,7 @@ const useMap = () => {
         confirmReport,
         setSelectedMarker,
         setShowModal,
-    }
-}
+    };
+};
 
 export default useMap;
