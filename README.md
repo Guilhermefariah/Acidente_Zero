@@ -61,14 +61,6 @@ acidente-zero/
 │   │   ├── Cadastro.tsx
 │   │   └── _app.tsx
 │   └── hooks/
-├── tests/
-│   ├── test_components/
-│   │   ├── Footer/
-│   │   │   └── Footer.test.tsx
-│   │   └── Header/
-│   │       └── Header.test.tsx
-│   └── test_pages/
-│       └── ...
 ├── .eslintrc.json
 ├── .gitignore
 ├── jest.config.js

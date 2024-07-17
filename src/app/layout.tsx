@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Inter } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 import { metadata } from "@/models/Metadata/metadata";
 
@@ -9,19 +10,23 @@ interface RootLayoutProps {
   children: ReactNode; 
 }
 
-export default function RootLayout({ children }: RootLayoutProps) {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   const title = (metadata.title as string) || "Default Title";
   const descriptionContent = (metadata.description as string) || "Default description";
 
   return (
-    <html lang="pt-br">
-      <head>
+    <>
+      <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{title}</title>
         <meta name="description" content={descriptionContent} />
-      </head>
-      <body className={inter.className}>{children}</body>
-    </html>
+      </Head>
+      <div className={inter.className}>
+        {children}
+      </div>
+    </>
   );
 }
+
+export default RootLayout;
