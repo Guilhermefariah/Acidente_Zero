@@ -1,6 +1,5 @@
 import '@/app/globals.css';
 import Layout from '@/app/layout';
-
 const Cadastro = () => {
     return (
         <Layout>
@@ -10,4 +9,3 @@ const Cadastro = () => {
         </Layout>
     )
 }
-export default Cadastro;
