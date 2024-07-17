@@ -2,29 +2,45 @@ import React from 'react';
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api';
 import Modal from './Modal';
 import useMap from '@/hooks/Map/useMap';
-import markerIcon from './MarkerIcon';
 
 const Map = () => {
-    const {
-        markers,
-        selectedMarker,
-        showModal,
-        clearMarkers,
-        saveMarkers,
-        onMapClick,
-        useLocate,
-        reportProblem,
-        confirmReport,
-        setSelectedMarker,
-        setShowModal,
-    } = useMap();
+    const [markers, setMarkers] = useState<MarkerType[]>([]);
+    const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
+    const [showModal, setShowModal] = useState(false);
+    const router = useRouter();
+
+    const clearMarkers = () => {
+        setMarkers([]);
+        setSelectedMarker(null);
+    }
+
+    const saveMarkers = () => {
+        console.log("Marcadores salvos:", markers);
+    }
+
+    const onMapClick = (event: google.maps.MapMouseEvent) => {
+        if (event.latLng) {
+            const newMarker: MarkerType = {
+                position: event.latLng.toJSON(),
+                id: Math.random(),
+            };
+            setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
+        }
+    }
 
     const { isLoaded, loadError } = useJsApiLoader({
-        googleMapsApiKey: 'AIzaSyDOE23aQV3prquDwLQGNBHpUVUwul33yNg',
+        googleMapsApiKey: "AIzaSyDOE23aQV3prquDwLQGNBHpUVUwul33yNg",
     });
 
     if (loadError) return <div>Erro ao carregar o mapa</div>;
     if (!isLoaded) return <div>Loading mapa...</div>;
+
+    const markerIcon = {
+        url: '/img/marker.png',
+        scaledSize: window.google?.maps.Size ? new window.google.maps.Size(50, 50) : undefined,
+        origin: window.google?.maps.Point ? new window.google.maps.Point(0, 0) : undefined,
+        anchor: window.google?.maps.Point ? new window.google.maps.Point(25, 50) : undefined,
+    }
 
     return (
         <div className="bg-gray-100 p-4">
@@ -33,7 +49,7 @@ const Map = () => {
                     center={{ lat: -23.257046, lng: -46.739705 }}
                     zoom={13}
                     onClick={onMapClick}
-                    mapContainerStyle={{ height: '80vh', width: '100%' }}
+                    mapContainerStyle={{ height: "80vh", width: "100%" }}
                 >
                     {markers.map((marker) => (
                         <Marker
@@ -41,7 +57,7 @@ const Map = () => {
                             position={marker.position}
                             icon={markerIcon}
                             onClick={() => {
-                                setSelectedMarker(marker);
+                                setSelectedMarker(marker)
                                 reportProblem();
                             }}
                         >
@@ -87,7 +103,7 @@ const Map = () => {
                 </Modal>
             )}
         </div>
-    );
+    )
 }
 
 export default Map;
