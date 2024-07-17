@@ -1,4 +1,7 @@
-export interface MarkerType {
-    position: google.maps.LatLngLiteral;
+export type MarkerType = {
     id: number;
+    position: {
+        lat: number;
+        lng: number;
+    };
 }
