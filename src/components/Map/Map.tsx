@@ -67,7 +67,7 @@ const Map = () => {
 
     const confirmReport = () => {
         setShowModal(false);
-        router.push('#');
+        router.push('/Cadastro');
     }
 
     return (
