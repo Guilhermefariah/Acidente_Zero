@@ -1,5 +1,5 @@
 export const routes = {
-    support: "/Apoio",
-    events: "/Eventos",
-    news: "/Novidades"
+    apoio: "/Apoio",
+    eventos: "/Eventos",
+    novidades: "/Novidades"
 }
