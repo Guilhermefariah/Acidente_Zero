@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { MarkerType } from '@/models/Map/MarkerType';
 
@@ -8,14 +8,46 @@ const useMap = () => {
     const [showModal, setShowModal] = useState(false);
     const router = useRouter();
 
-    const clearMarkers = () => {
-        setMarkers([]);
-        setSelectedMarker(null);
-    }
+    useEffect(() => {
+        fetchMarkers();
+    }, []);
 
-    const saveMarkers = () => {
-        console.log('Marcadores salvos:', markers);
-    }
+    const fetchMarkers = async () => {
+        try {
+            const response = await fetch('/api/map');
+            const data: MarkerType[] = await response.json();
+            setMarkers(data);
+        } catch (error) {
+            console.error('Erro ao buscar marcadores:', error);
+        }
+    };
+
+    const clearMarkers = async () => {
+        try {
+            await fetch('/api/map', { method: 'DELETE' });
+            setMarkers([]);
+            setSelectedMarker(null);
+        } catch (error) {
+            console.error('Erro ao limpar marcadores:', error);
+        }
+    };
+
+    const saveMarkers = async () => {
+        try {
+            markers.forEach(async (marker) => {
+                await fetch('/api/map', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(marker),
+                });
+            });
+            console.log('Marcadores salvos:', markers);
+        } catch (error) {
+            console.error('Erro ao salvar marcadores:', error);
+        }
+    };
 
     const onMapClick = (event: google.maps.MapMouseEvent) => {
         if (event.latLng) {
@@ -25,7 +57,7 @@ const useMap = () => {
             };
             setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
         }
-    }
+    };
 
     const useLocate = () => {
         if (navigator.geolocation) {
@@ -42,16 +74,16 @@ const useMap = () => {
         } else {
             alert('Geolocalização não suportada neste navegador.');
         }
-    }
+    };
 
     const reportProblem = () => {
         setShowModal(true);
-    }
+    };
 
     const confirmReport = () => {
         setShowModal(false);
         router.push('#');
-    }
+    };
 
     return {
         markers,
@@ -65,7 +97,7 @@ const useMap = () => {
         confirmReport,
         setSelectedMarker,
         setShowModal,
-    }
-}
+    };
+};
 
 export default useMap;
