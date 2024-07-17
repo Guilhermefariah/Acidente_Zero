@@ -1,19 +1,17 @@
-// _app.tsx
-
-import React from 'react';
+import '@/app/globals.css'; 
 import type { AppProps } from 'next/app';
-import RootLayout from '@/app/layout';
-import Navigation from '@/components/Header/Navigation';
-import Footer from '@/components/Footer/Footer';
+import Head from 'next/head';
+import Layout from '@/app/layout';
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return (
-        <RootLayout>
-            <Navigation />
-            <Component {...pageProps} />
-            <Footer /> 
-        </RootLayout>
-    );
+  return (
+    <Layout>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
 export default MyApp;
