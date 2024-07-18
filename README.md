@@ -42,32 +42,51 @@ acidente-zero/
 │   │   ├── Map/
 │   │   │   ├── Map.tsx
 │   │   │   └── Modal.tsx
-│   │   └── ...
+│   │   └── Common/
+│   │       └── Button.tsx
 │   ├── models/
 │   │   ├── Header/
 │   │   │   ├── PageTitleProps.ts
 │   │   └── Map/
 │   │       ├── MarkerType.ts
 │   │       └── ModalProps.ts
-│   ├── routes
-│   │   └── Header/
-│   │       ├── Menu.ts
-│   │       ├── Navigation.ts
-│   │       └── UserMenuRoutes.ts
+│   ├── routes/
+│   │   ├── Header/
+│   │   │   ├── Menu.ts
+│   │   │   ├── Navigation.ts
+│   │   │   └── UserMenuRoutes.ts
+│   │   └── index.ts
 │   ├── styles/
+│   │   ├── globals.css
+│   │   └── components/
+│   │       ├── header.css
+│   │       ├── footer.css
+│   │       └── map.css
 │   ├── utils/
+│   │   ├── formatDate.ts
+│   │   ├── calculateDistance.ts
+│   │   └── ...
 │   ├── services/
+│   │   ├── api.ts
+│   │   ├── auth.ts
+│   │   └── ...
 │   ├── pages/
 │   │   ├── _app.tsx
+│   │   ├── index.tsx
+│   │   ├── about.tsx
+│   │   └── contact.tsx
 │   └── hooks/
-├── tests/
-│   ├── test_components/
-│   │   ├── Footer/
-│   │   │   └── Footer.test.tsx
-│   │   └── Header/
-│   │       └── Header.test.tsx
-│   └── test_pages/
+│       ├── useAuth.ts
+│       ├── useMap.ts
 │       └── ...
+├── tests/
+│   ├── components/
+│   │   ├── Footer.test.tsx
+│   │   └── Header.test.tsx
+│   ├── pages/
+│   │   └── index.test.tsx
+│   └── utils/
+│       └── calculateDistance.test.ts
 ├── .eslintrc.json
 ├── .gitignore
 ├── jest.config.js
@@ -76,6 +95,7 @@ acidente-zero/
 ├── tailwind.config.js
 ├── tsconfig.json
 └── README.md
+
 ```
 
 
