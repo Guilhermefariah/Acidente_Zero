@@ -2,5 +2,5 @@ export const routes = {
     inicio: "/",
     sobre: "/Sobre",
     relatar: "/Relatar",
-    cadastro: "/Cadastro"
+    cadastro: "/Cadastro/Cadastro"
 }
