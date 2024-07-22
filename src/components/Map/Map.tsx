@@ -67,7 +67,7 @@ const Map = () => {
 
     const confirmReport = () => {
         setShowModal(false);
-        router.push('/Report/Report');
+        router.push('/Header/Report/Report');
     }
 
     return (
