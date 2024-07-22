@@ -1,6 +1,6 @@
 export const routes = {
     inicio: "/",
     sobre: "About/About",
-    relatar: "/Relatar",
+    relatar: "/Report/Report",
     cadastro: "/Cadastro/Cadastro"
 }
