@@ -4,7 +4,6 @@ import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-map
 import Modal from "./Modal";
 import { MarkerType } from "@/models/Map/MarkerType";
 
-
 const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([]);
     const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
@@ -34,8 +33,8 @@ const Map = () => {
         googleMapsApiKey: "AIzaSyDOE23aQV3prquDwLQGNBHpUVUwul33yNg",
     });
 
-    if (loadError) return <div>Erro ao carregar o mapa</div>;
-    if (!isLoaded) return <div>Carregando o mapa...</div>;
+    if (loadError) return <div className="text-red-500">Erro ao carregar o mapa</div>;
+    if (!isLoaded) return <div className="text-gray-500">Carregando o mapa...</div>;
 
     const markerIcon = {
         url: '/img/marker.png',
@@ -71,8 +70,8 @@ const Map = () => {
     }
 
     return (
-        <div className="bg-gray-200 p-4">
-            <div className="border-2 border-gray-400 relative">
+        <div className="bg-gray-900 p-4">
+            <div className="border-2 border-gray-600 relative">
                 <GoogleMap
                     center={{ lat: -23.257046, lng: -46.739705 }}
                     zoom={13}
@@ -94,7 +93,7 @@ const Map = () => {
                                     position={marker.position}
                                     onCloseClick={() => setSelectedMarker(null)}
                                 >
-                                    <div>Problema relatado.</div>
+                                    <div className="text-gray-800">Problema relatado.</div>
                                 </InfoWindow>
                             )}
                         </Marker>
@@ -103,19 +102,19 @@ const Map = () => {
             </div>
             <div className="text-start mt-2 flex flex-wrap gap-2 sm:gap-4 lg:gap-6">
                 <button
-                    className="bg-gray-600 text-gray-100 py-2 px-4 rounded hover:bg-gray-500 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
+                    className="bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
                     onClick={clearMarkers}
                 >
                     Limpar
                 </button>
                 <button
-                    className="bg-gray-500 text-gray-100 py-2 px-4 rounded hover:bg-gray-400 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
+                    className="bg-gray-600 text-white py-2 px-4 rounded hover:bg-gray-500 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
                     onClick={saveMarkers}
                 >
                     Salvar
                 </button>
                 <button
-                    className="bg-gray-400 text-gray-100 py-2 px-4 rounded hover:bg-gray-300 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
+                    className="bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-400 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3"
                     onClick={useLocate}
                 >
                     Minha Localização
