@@ -27,28 +27,27 @@ const Report: React.FC = () => {
 
     const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Enviar dados para a API
         try {
             // Lógica para backend
             setSubmissionStatus("Seu relatório foi enviado com sucesso!");
         } catch (error) {
-            setSubmissionStatus("Ocorreu um erro ao enviar o relatório.");
+            setSubmissionStatus("Ocorreu um erro ao enviar o relatório. Por favor, tente novamente.");
         }
     };
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-gray-900 text-white">
             <Header />
             <main className="flex-grow container mx-auto p-4">
                 <motion.form
                     onSubmit={submitForm}
-                    className="bg-gradient-to-r from-gray-100 via-gray-300 to-gray-500 p-6 space-y-4 rounded-md shadow-md"
+                    className="bg-gray-800 p-6 space-y-4 rounded-md shadow-md"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
                     <motion.h1
-                        className="text-gray-700 text-4xl font-serif text-center mb-6"
+                        className="text-gray-100 text-4xl font-serif text-center mb-6"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
@@ -60,7 +59,7 @@ const Report: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                        <label htmlFor="location" className="block text-2xl font-serif text-gray-700">Localização</label>
+                        <label htmlFor="location" className="block text-2xl font-serif text-gray-100">Localização</label>
                         <input
                             type="text"
                             id="location"
@@ -68,7 +67,7 @@ const Report: React.FC = () => {
                             placeholder="Digite a localização"
                             value={formData.location}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            className="mt-1 block w-full p-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
                             required
                         />
                     </motion.div>
@@ -77,14 +76,14 @@ const Report: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                     >
-                        <label htmlFor="description" className="block text-2xl font-serif text-gray-700">Descrição</label>
+                        <label htmlFor="description" className="block text-2xl font-serif text-gray-100">Descrição</label>
                         <textarea
                             id="description"
                             name="description"
                             placeholder="Descreva o problema"
                             value={formData.description}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            className="mt-1 block w-full p-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
                             rows={4}
                             required
                         />
@@ -94,14 +93,17 @@ const Report: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.9 }}
                     >
-                        <label htmlFor="image" className="block text-2xl font-serif text-gray-700">Imagem (opcional)</label>
+                        <label htmlFor="image" className="block text-2xl font-serif text-gray-100">Imagem (opcional)</label>
                         <input
                             type="file"
                             id="image"
                             name="image"
                             onChange={handleFileChange}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none"
+                            className="mt-1 block w-full p-2 border border-gray-700 rounded-md shadow-sm focus:outline-none"
                         />
+                        {formData.image && (
+                            <p className="mt-2 text-gray-300">Arquivo selecionado: {formData.image.name}</p>
+                        )}
                     </motion.div>
                     <motion.button
                         type="submit"
@@ -120,7 +122,7 @@ const Report: React.FC = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <p className="text-lg font-semibold text-gray-900">{submissionStatus}</p>
+                        <p className="text-lg font-semibold text-gray-300">{submissionStatus}</p>
                     </motion.div>
                 )}
             </main>
