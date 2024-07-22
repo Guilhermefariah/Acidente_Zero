@@ -1,13 +1,12 @@
-import '@/app/globals.css'; 
-import type { AppProps } from 'next/app';
-import Layout from '@/app/layout';
+import '@/app/globals.css';
+import { Inter } from 'next/font/google';
 
-function MyApp({ Component, pageProps }: AppProps) {
+const inter = Inter({ subsets: ["latin"] });
+
+export default function App({ Component, pageProps }: { Component: any; pageProps: any }) {
   return (
-    <Layout>
+    <div className={inter.className}>
       <Component {...pageProps} />
-    </Layout>
+    </div>
   );
 }
-
-export default MyApp;
