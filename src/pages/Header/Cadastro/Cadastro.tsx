@@ -26,18 +26,18 @@ const Cadastro: React.FC = () => {
     }
 
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen bg-gray-900 text-white">
             <Header />
             <main className="flex-grow container mx-auto p-4">
-                <motion.form 
-                    onSubmit={submitForm} 
-                    className="bg-gradient-to-r from-gray-100 via-gray-300 to-gray-500 p-6 space-y-4 rounded-md shadow-md"
+                <motion.form
+                    onSubmit={submitForm}
+                    className="bg-gray-800 p-6 space-y-4 rounded-md shadow-md"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <motion.h1 
-                        className="text-gray-700 text-4xl font-serif text-center mb-6"
+                    <motion.h1
+                        className="text-gray-100 text-4xl font-serif text-center mb-6"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
@@ -49,7 +49,7 @@ const Cadastro: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                     >
-                        <label htmlFor="name" className="block text-2xl font-serif text-gray-700">Nome</label>
+                        <label htmlFor="name" className="block text-2xl font-serif text-gray-300">Nome</label>
                         <input
                             type="text"
                             id="name"
@@ -57,7 +57,8 @@ const Cadastro: React.FC = () => {
                             placeholder="Digite seu nome"
                             value={formData.name}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            className="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-700 text-white"
+                            aria-required="true"
                         />
                     </motion.div>
                     <motion.div
@@ -65,7 +66,7 @@ const Cadastro: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.6 }}
                     >
-                        <label htmlFor="email" className="block text-2xl font-serif text-gray-700">Email</label>
+                        <label htmlFor="email" className="block text-2xl font-serif text-gray-300">Email</label>
                         <input
                             type="email"
                             id="email"
@@ -73,7 +74,8 @@ const Cadastro: React.FC = () => {
                             placeholder="Digite seu email"
                             value={formData.email}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            className="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-700 text-white"
+                            aria-required="true"
                         />
                     </motion.div>
                     <motion.div
@@ -81,7 +83,7 @@ const Cadastro: React.FC = () => {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.9 }}
                     >
-                        <label htmlFor="password" className="block text-2xl font-serif text-gray-700">Senha</label>
+                        <label htmlFor="password" className="block text-2xl font-serif text-gray-300">Senha</label>
                         <input
                             type="password"
                             id="password"
@@ -89,12 +91,13 @@ const Cadastro: React.FC = () => {
                             placeholder="Digite sua senha"
                             value={formData.password}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400"
+                            className="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-700 text-white"
+                            aria-required="true"
                         />
                     </motion.div>
-                    <motion.button 
-                        type="submit" 
-                        className="bg-blue-600 text-gray-100 hover:text-gray-200 text-2xl py-2 px-4 rounded-md hover:bg-blue-700 transition duration-200 transform hover:scale-105 w-full"
+                    <motion.button
+                        type="submit"
+                        className="bg-gray-900 text-gray-100 hover:text-gray-200 text-2xl py-2 px-4 rounded-md hover:bg-gray-700 transition duration-200 transform hover:scale-105 w-full"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 0.5, delay: 1.2 }}

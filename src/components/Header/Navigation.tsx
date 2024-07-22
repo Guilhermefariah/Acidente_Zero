@@ -24,7 +24,7 @@ const Navigation: React.FC = () => {
             <ul className={`flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 ${isOpen ? 'flex' : 'hidden'} md:flex`}>
                 {Object.keys(routes).map((key, index) => (
                     <li key={index}>
-                        <Link href={routes[key as keyof typeof routes]} className="text-gray-600 font-serif hover:text-gray-900 text-xl hover:underline">
+                        <Link href={routes[key as keyof typeof routes]} className="text-white font-serif hover:text-orange-400 text-xl hover:underline">
                             {key.charAt(0).toUpperCase() + key.slice(1)}
                         </Link>
                     </li>
