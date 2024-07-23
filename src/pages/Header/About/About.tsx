@@ -7,7 +7,7 @@ const About: React.FC = () => {
     return (
         <div className="flex flex-col min-h-screen bg-gray-900 text-white">
             <Header />
-            <main className="flex-grow">
+            <main className="flex-grow container mx-auto p-4">
                 <motion.section
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}

@@ -67,7 +67,7 @@ const Report: React.FC = () => {
                             placeholder="Digite a localização"
                             value={formData.location}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            className="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-700 text-white"
                             required
                         />
                     </motion.div>
@@ -83,7 +83,7 @@ const Report: React.FC = () => {
                             placeholder="Descreva o problema"
                             value={formData.description}
                             onChange={setValue}
-                            className="mt-1 block w-full p-2 border border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-500"
+                            className="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-700 text-white"
                             rows={4}
                             required
                         />
@@ -99,7 +99,7 @@ const Report: React.FC = () => {
                             id="image"
                             name="image"
                             onChange={handleFileChange}
-                            className="mt-1 block w-full p-2 border border-gray-700 rounded-md shadow-sm focus:outline-none"
+                            className="mt-1 block w-full p-2 border border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-400 bg-gray-700 text-white"
                         />
                         {formData.image && (
                             <p className="mt-2 text-gray-300">Arquivo selecionado: {formData.image.name}</p>
