@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import Link from "next/link";
-import { routes } from "@/routes/Header/Menu";
+import React, { useState } from "react"
+import Link from "next/link"
+import { routes } from "@/routes/Header/Menu"
 
 const Menu: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
 
   const isMenuOpen = () => {
-    setIsOpen(!isOpen);
+    setIsOpen(!isOpen)
   }
 
   return (
@@ -25,7 +25,7 @@ const Menu: React.FC = () => {
         ))}
       </div>
     </div>
-  );
+  )
 }
 
-export default Menu;
+export default Menu

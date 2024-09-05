@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import { routes } from '@/routes/Header/Navigation';
+import React, { useState } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { routes } from '@/routes/Header/Navigation'
 
 const Navigation: React.FC = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState(false)
 
     const clickMenu = () => {
-        setIsOpen(!isOpen);
+        setIsOpen(!isOpen)
     }
 
     return (
@@ -31,7 +31,7 @@ const Navigation: React.FC = () => {
                 ))}
             </ul>
         </nav>
-    );
+    )
 }
 
-export default Navigation;
+export default Navigation

@@ -1,3 +1,3 @@
 export interface PageTitleProps {
-    title: string;
+    title: string
 }

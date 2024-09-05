@@ -1,14 +1,14 @@
-import React, { useRef } from "react";
-import Image from 'next/image';
+import React, { useRef } from "react"
+import Image from 'next/image'
 
 const Search: React.FC = () => {
-    const inputRef = useRef<HTMLInputElement>(null);
+    const inputRef = useRef<HTMLInputElement>(null)
 
     const iconClick = () => {
         if (inputRef.current) {
-            inputRef.current.focus();
+            inputRef.current.focus()
         }
-    };
+    }
 
     return (
         <div className="relative flex items-center">
@@ -26,7 +26,7 @@ const Search: React.FC = () => {
                 <Image src="/img/search.png" alt="Search" width={25} height={25} />
             </button>
         </div>
-    );
+    )
 }
 
-export default Search;
+export default Search

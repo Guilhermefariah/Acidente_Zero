@@ -1,6 +1,6 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { PageTitleProps } from "@/models/Header/PageTitleProps";
+import React from "react"
+import { motion } from "framer-motion"
+import { PageTitleProps } from "@/models/Header/PageTitleProps"
 
 
 const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
@@ -13,7 +13,7 @@ const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
         >
             {title}
         </motion.h1>
-    );
+    )
 }
 
-export default PageTitle;
+export default PageTitle

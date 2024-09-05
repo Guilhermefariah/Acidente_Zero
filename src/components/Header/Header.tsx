@@ -1,14 +1,14 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Logo from "./Logo";
-import Menu from "./Menu";
-import Search from "./Search";
-import UserMenu from "./UserMenu";
-import Navigation from "./Navigation";
-import PageTitle from "./PageTitle";
+import React from "react"
+import { motion } from "framer-motion"
+import Logo from "./Logo"
+import Menu from "./Menu"
+import Search from "./Search"
+import UserMenu from "./UserMenu"
+import Navigation from "./Navigation"
+import PageTitle from "./PageTitle"
 
 const Header: React.FC = () => {
-  const pageTitle = "Acidente Zero";
+  const pageTitle = "Acidente Zero"
 
   return (
     <motion.header
@@ -40,7 +40,7 @@ const Header: React.FC = () => {
       </div>
       <Menu />
     </motion.header>
-  );
+  )
 }
 
-export default Header;
+export default Header

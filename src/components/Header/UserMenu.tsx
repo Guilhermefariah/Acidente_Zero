@@ -1,28 +1,28 @@
-import React, { useState, useRef, useEffect, useCallback } from "react";
-import Image from 'next/image';
-import Link from "next/link";
-import { userMenuRoutes } from "@/routes/Header/UserMenuRoutes"; // Importe as rotas do UserMenuRoutes
+import React, { useState, useRef, useEffect, useCallback } from "react"
+import Image from 'next/image'
+import Link from "next/link"
+import { userMenuRoutes } from "@/routes/Header/UserMenuRoutes" // Importe as rotas do UserMenuRoutes
 
 const UserMenu: React.FC = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+    const [menuOpen, setMenuOpen] = useState(false)
+    const menuRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const clickOutside = (event: MouseEvent) => {
             if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-                setMenuOpen(false);
+                setMenuOpen(false)
             }
         }
-        document.addEventListener("mousedown", clickOutside);
+        document.addEventListener("mousedown", clickOutside)
 
         return () => {
-            document.removeEventListener("mousedown", clickOutside);
+            document.removeEventListener("mousedown", clickOutside)
         }
-    }, []);
+    }, [])
 
     const clickMenu = useCallback(() => {
-        setMenuOpen(prev => !prev);
-    }, []);
+        setMenuOpen(prev => !prev)
+    }, [])
 
     return (
         <div className="relative flex items-center space-x-4">
@@ -58,7 +58,7 @@ const UserMenu: React.FC = () => {
                 )}
             </div>
         </div>
-    );
+    )
 }
 
-export default UserMenu;
+export default UserMenu

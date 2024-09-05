@@ -1,22 +1,22 @@
-import { useState } from "react";
-import { useRouter } from 'next/navigation';
-import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api";
-import Modal from "./Modal";
-import { MarkerType } from "@/models/Map/MarkerType";
+import { useState } from "react"
+import { useRouter } from 'next/navigation'
+import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from "@react-google-maps/api"
+import Modal from "./Modal"
+import { MarkerType } from "@/models/Map/MarkerType"
 
 const Map = () => {
-    const [markers, setMarkers] = useState<MarkerType[]>([]);
-    const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null);
-    const [showModal, setShowModal] = useState(false);
-    const router = useRouter();
+    const [markers, setMarkers] = useState<MarkerType[]>([])
+    const [selectedMarker, setSelectedMarker] = useState<MarkerType | null>(null)
+    const [showModal, setShowModal] = useState(false)
+    const router = useRouter()
 
     const clearMarkers = () => {
-        setMarkers([]);
-        setSelectedMarker(null);
+        setMarkers([])
+        setSelectedMarker(null)
     }
 
     const saveMarkers = () => {
-        console.log("Marcadores salvos:", markers);
+        console.log("Marcadores salvos:", markers)
     }
 
     const onMapClick = (event: google.maps.MapMouseEvent) => {
@@ -24,24 +24,24 @@ const Map = () => {
             const newMarker: MarkerType = {
                 position: event.latLng.toJSON(),
                 id: Math.random(),
-            };
-            setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
+            }
+            setMarkers((prevMarkers) => [...prevMarkers, newMarker])
         }
     }
 
     const { isLoaded, loadError } = useJsApiLoader({
         googleMapsApiKey: "AIzaSyDOE23aQV3prquDwLQGNBHpUVUwul33yNg",
-    });
+    })
 
-    if (loadError) return <div className="text-red-500">Erro ao carregar o mapa</div>;
-    if (!isLoaded) return <div className="text-gray-500">Carregando o mapa...</div>;
+    if (loadError) return <div className="text-red-500">Erro ao carregar o mapa</div>
+    if (!isLoaded) return <div className="text-gray-500">Carregando o mapa...</div>
 
     const markerIcon = {
         url: '/img/marker.png',
         scaledSize: window.google?.maps.Size ? new window.google.maps.Size(50, 50) : undefined,
         origin: window.google?.maps.Point ? new window.google.maps.Point(0, 0) : undefined,
         anchor: window.google?.maps.Point ? new window.google.maps.Point(25, 50) : undefined,
-    };
+    }
 
     const useLocate = () => {
         if (navigator.geolocation) {
@@ -52,21 +52,21 @@ const Map = () => {
                         lng: position.coords.longitude,
                     },
                     id: Math.random(),
-                };
-                setMarkers((prevMarkers) => [...prevMarkers, newMarker]);
-            });
+                }
+                setMarkers((prevMarkers) => [...prevMarkers, newMarker])
+            })
         } else {
-            alert("Geolocalização não suportada neste navegador.");
+            alert("Geolocalização não suportada neste navegador.")
         }
     }
 
     const reportProblem = () => {
-        setShowModal(true);
+        setShowModal(true)
     }
 
     const confirmReport = () => {
-        setShowModal(false);
-        router.push('/Header/Report/Report');
+        setShowModal(false)
+        router.push('/Header/Report/Report')
     }
 
     return (
@@ -85,7 +85,7 @@ const Map = () => {
                             icon={markerIcon}
                             onClick={() => {
                                 setSelectedMarker(marker)
-                                reportProblem();
+                                reportProblem()
                             }}
                         >
                             {selectedMarker && selectedMarker.id === marker.id && (
@@ -133,4 +133,4 @@ const Map = () => {
     )
 }
 
-export default Map;
+export default Map

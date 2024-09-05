@@ -1,5 +1,5 @@
-import React from "react";
-import { ModalProps } from "@/models/Map/ModalProps";
+import React from "react"
+import { ModalProps } from "@/models/Map/ModalProps"
 
 const Modal: React.FC<ModalProps> = ({ title, onClose, onConfirm, children }) => {
     return (
@@ -25,4 +25,4 @@ const Modal: React.FC<ModalProps> = ({ title, onClose, onConfirm, children }) =>
         </div>
     )
 }
-export default Modal;
+export default Modal
