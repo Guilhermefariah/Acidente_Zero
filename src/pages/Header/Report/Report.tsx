@@ -1,39 +1,39 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import Header from '@/components/Header/Header'
+import { Footer } from '@/components/Footer/Footer'
 
 const Report: React.FC = () => {
     const [formData, setFormData] = useState({
         location: '',
         description: '',
         image: null as File | null,
-    });
-    const [submissionStatus, setSubmissionStatus] = useState<string | null>(null);
+    })
+    const [submissionStatus, setSubmissionStatus] = useState<string | null>(null)
 
     const setValue = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { name, value } = e.target;
+        const { name, value } = e.target
         setFormData({
             ...formData,
             [name]: value
-        });
-    };
+        })
+    }
 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         if (e.target.files && e.target.files[0]) {
-            setFormData({ ...formData, image: e.target.files[0] });
+            setFormData({ ...formData, image: e.target.files[0] })
         }
-    };
+    }
 
     const submitForm = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+        e.preventDefault()
         try {
             // Lógica para backend
-            setSubmissionStatus("Seu relatório foi enviado com sucesso!");
+            setSubmissionStatus("Seu relatório foi enviado com sucesso!")
         } catch (error) {
-            setSubmissionStatus("Ocorreu um erro ao enviar o relatório. Por favor, tente novamente.");
+            setSubmissionStatus("Ocorreu um erro ao enviar o relatório. Por favor, tente novamente.")
         }
-    };
+    }
 
     return (
         <div className="flex flex-col min-h-screen bg-gray-900 text-white">
@@ -128,7 +128,7 @@ const Report: React.FC = () => {
             </main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default Report;
+export default Report

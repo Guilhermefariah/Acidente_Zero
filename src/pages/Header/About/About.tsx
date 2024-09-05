@@ -1,7 +1,7 @@
-import React from "react";
-import { motion } from "framer-motion";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
+import React from "react"
+import { motion } from "framer-motion"
+import Header from "@/components/Header/Header"
+import { Footer } from "@/components/Footer/Footer"
 
 const About: React.FC = () => {
     return (
@@ -28,7 +28,7 @@ const About: React.FC = () => {
             </main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default About;
+export default About

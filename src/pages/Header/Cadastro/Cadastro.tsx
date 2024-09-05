@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import '@/app/globals.css';
+import React, { useState } from 'react'
+import { motion } from 'framer-motion'
+import Header from '@/components/Header/Header'
+import { Footer } from '@/components/Footer/Footer'
+import '@/app/globals.css'
 
 const Cadastro: React.FC = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
         password: ''
-    });
+    })
 
     const setValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = e.target;
+        const { name, value } = e.target
         setFormData({
             ...formData,
             [name]: value
-        });
+        })
     }
 
     const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+        e.preventDefault()
         // Enviar dados para a API
-        console.log(formData);
+        console.log(formData)
     }
 
     return (
@@ -108,7 +108,7 @@ const Cadastro: React.FC = () => {
             </main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default Cadastro;
+export default Cadastro

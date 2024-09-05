@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import '@/app/globals.css';
+import React from 'react'
+import { motion } from 'framer-motion'
+import Header from '@/components/Header/Header'
+import { Footer } from '@/components/Footer/Footer'
+import '@/app/globals.css'
 
 const Novidades: React.FC = () => {
     return (
@@ -61,7 +61,7 @@ const Novidades: React.FC = () => {
             </main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default Novidades;
+export default Novidades

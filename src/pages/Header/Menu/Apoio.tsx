@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import Header from '@/components/Header/Header';
-import Footer from '@/components/Footer/Footer';
-import '@/app/globals.css';
+import React from 'react'
+import { motion } from 'framer-motion'
+import Header from '@/components/Header/Header'
+import { Footer } from '@/components/Footer/Footer'
+import '@/app/globals.css'
 
 const Apoio: React.FC = () => {
     return (
@@ -62,7 +62,7 @@ const Apoio: React.FC = () => {
             </main>
             <Footer />
         </div>
-    );
+    )
 }
 
-export default Apoio;
+export default Apoio
