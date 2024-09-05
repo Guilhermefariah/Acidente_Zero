@@ -7,7 +7,7 @@ import UserMenu from "./UserMenu"
 import Navigation from "./Navigation"
 import PageTitle from "./PageTitle"
 
-const Header: React.FC = () => {
+export const Header: React.FC = () => {
   const pageTitle = "Acidente Zero"
 
   return (
@@ -43,4 +43,3 @@ const Header: React.FC = () => {
   )
 }
 
-export default Header
