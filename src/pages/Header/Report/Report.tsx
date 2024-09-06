@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Header } from '@/components/Header/Header'
 import { Footer } from '@/components/Footer/Footer'
 
-export const Report: React.FC = () => {
+const Report: React.FC = () => {
     const [formData, setFormData] = useState({
         location: '',
         description: '',
@@ -131,4 +131,4 @@ export const Report: React.FC = () => {
     )
 }
 
-
+export default Report

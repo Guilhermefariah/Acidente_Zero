@@ -2,9 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import { Header } from '@/components/Header/Header'
 import { Footer } from '@/components/Footer/Footer'
-import '../app/globals.css'
 
-export const Apoio: React.FC = () => {
+const Support: React.FC = () => {
     return (
         <div className='flex flex-col min-h-screen bg-gray-900 text-white'>
             <Header />
@@ -21,7 +20,7 @@ export const Apoio: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        Apoio
+                        Support
                     </motion.h1>
                     <motion.p
                         className='text-gray-300 text-lg'
@@ -64,3 +63,5 @@ export const Apoio: React.FC = () => {
         </div>
     )
 }
+
+export default Support

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Header } from '@/components/Header/Header'
 import { Footer } from '@/components/Footer/Footer'
 
-export const Cadastro: React.FC = () => {
+const Register: React.FC = () => {
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -41,7 +41,7 @@ export const Cadastro: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        Cadastro
+                        Crie sua conta
                     </motion.h1>
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -109,3 +109,5 @@ export const Cadastro: React.FC = () => {
         </div>
     )
 }
+
+export default Register

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { Header } from '@/components/Header/Header'
 import { Footer } from '@/components/Footer/Footer'
 
-export const About: React.FC = () => {
+const About: React.FC = () => {
     return (
         <div className='flex flex-col min-h-screen bg-gray-900 text-white'>
             <Header />
@@ -30,3 +30,5 @@ export const About: React.FC = () => {
         </div>
     )
 }
+
+export default About
