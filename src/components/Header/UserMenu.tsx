@@ -49,11 +49,11 @@ export const UserMenu: React.FC = () => {
                 {menuOpen && (
                     <div className='absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-0 flex flex-col'>
                         {Object.keys(userMenuRoutes).map((key, index) => (
-                            <Link key={index} href={userMenuRoutes[key as keyof typeof userMenuRoutes]} className='block px-4 py-2 text-gray-200 hover:bg-gray-700'>
+                            <Link key={index} href={userMenuRoutes[key as keyof typeof userMenuRoutes]} className='block px-4 py-2 text-gray-300 hover:bg-gray-700'>
                                 {key.charAt(0).toUpperCase() + key.slice(1)}
                             </Link>
                         ))}
-                        <button className='block w-full text-left px-4 py-2 text-gray-200 hover:bg-gray-700'>Sair</button>
+                        <button className='block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700'>Sair</button>
                     </div>
                 )}
             </div>
