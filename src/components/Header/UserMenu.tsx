@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { userMenuRoutes } from '@/routes/Header/UserMenuRoutes' // Importe as rotas do UserMenuRoutes
+import { userMenuRoutes } from '@/routes/Header/UserMenuRoutes'
 
 export const UserMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false)

@@ -102,19 +102,19 @@ export const Map = () => {
             </div>
             <div className='text-start mt-2 flex flex-wrap gap-2 sm:gap-4 lg:gap-6'>
                 <button
-                    className='bg-gray-700 text-white py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
+                    className='bg-gray-700 text-gray-300 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
                     onClick={clearMarkers}
                 >
                     Limpar
                 </button>
                 <button
-                    className='bg-gray-600 text-white py-2 px-4 rounded hover:bg-gray-500 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
+                    className='bg-gray-600 text-gray-300 py-2 px-4 rounded hover:bg-gray-500 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
                     onClick={saveMarkers}
                 >
                     Salvar
                 </button>
                 <button
-                    className='bg-gray-500 text-white py-2 px-4 rounded hover:bg-gray-400 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
+                    className='bg-gray-500 text-gray-300 py-2 px-4 rounded hover:bg-gray-400 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
                     onClick={useLocate}
                 >
                     Minha Localização
