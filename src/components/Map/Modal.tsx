@@ -15,7 +15,7 @@ export const Modal: React.FC<ModalProps> = ({ title, onClose, onConfirm, childre
                         Cancelar
                     </button>
                     <button
-                        className='bg-gray-600 text-white py-2 px-4 rounded hover:bg-gray-500 transition duration-300 ease-in-out'
+                        className='bg-gray-600 text-gray-300 py-2 px-4 rounded hover:bg-gray-500 transition duration-300 ease-in-out'
                         onClick={onConfirm}
                     >
                         Confirmar
