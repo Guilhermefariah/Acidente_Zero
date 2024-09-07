@@ -5,7 +5,7 @@ import { Footer } from '@/components/Footer/Footer'
 
 const About: React.FC = () => {
     return (
-        <div className='flex flex-col min-h-screen bg-gray-900 text-white'>
+        <div className='flex flex-col min-h-screen bg-gray-900 text-gray-300'>
             <Header />
             <main className='flex-grow container mx-auto p-4'>
                 <motion.section
