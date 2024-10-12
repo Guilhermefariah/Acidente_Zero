@@ -18,7 +18,7 @@ O **Acidente Zero** é uma plataforma inovadora criada para melhorar a seguranç
 
 1. Clone o repositório:
 ```
-git clone https://github.com/seu-usuario/seu-projeto.git
+git clone https://github.com/Guilhermefariah/Acidente_Zero.git
 ```
 
 2. Instale as dependências:
