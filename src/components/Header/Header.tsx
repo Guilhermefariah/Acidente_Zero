@@ -1,11 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Logo } from './Logo'
-import { Menu } from './Menu'
-import { Search } from './Search'
-import { UserMenu } from './UserMenu'
-import { Navigation } from './Navigation'
-import { PageTitle } from './PageTitle'
+import { Logo } from './ui/Logo'
+import { Menu } from './ui/Menu'
+import { Search } from './ui/Search'
+import { UserMenu } from './ui/UserMenu'
+import { Navigation } from './ui/Navigation'
+import { PageTitle } from './ui/PageTitle'
 
 export const Header: React.FC = () => {
   const pageTitle = 'Acidente Zero'
