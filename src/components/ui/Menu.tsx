@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
-import { routes } from '@/routes/Header/Menu'
+import { routes } from '@/routes/Header/Menu/Menu'
 
 export const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)

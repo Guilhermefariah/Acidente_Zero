@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { routes } from '@/routes/Header/Navigation'
+import { routes } from '@/routes/Header/Navigation/Navigation'
 
 export const Navigation: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false)
