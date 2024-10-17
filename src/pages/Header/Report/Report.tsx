@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Header } from '@/components/Header/Header'
+import { Header } from '@/(accidentzero)/Header'
 import { Footer } from '@/(accidentzero)/Footer'
 
 const Report: React.FC = () => {
