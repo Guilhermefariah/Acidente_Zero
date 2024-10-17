@@ -1,6 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import { Footer } from '@/components/Footer/Footer'
+import { Footer } from '@/(accidentzero)/Footer'
 import '@testing-library/jest-dom/extend-expect'
 
 describe('Footer component', () => {
