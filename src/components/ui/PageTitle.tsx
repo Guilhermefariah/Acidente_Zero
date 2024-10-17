@@ -1,7 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { PageTitleProps } from '@/models/Header/PageTitleProps'
 
+interface PageTitleProps {
+    title: string
+}
 
 export const PageTitle: React.FC<PageTitleProps> = ({ title }) => {
     return (
