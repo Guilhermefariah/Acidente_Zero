@@ -32,3 +32,22 @@ body {
     text-wrap: balance;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--background-end-rgb));
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(var(--foreground-rgb));
+  border-radius: 10px;
+}
