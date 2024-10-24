@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 
-const menuClasses = {
+const menuClass = {
   container: 'w-full',
   button: 'w-full flex justify-between items-center bg-gray-800 px-4 py-2 text-left text-3xl text-gray-300 font-serif hover:bg-gray-700 focus:outline-none md:hidden',
   links: 'block text-gray-300 font-serif hover:text-orange-400 text-2xl p-2 hover:underline',
@@ -19,18 +19,21 @@ export const Menu: React.FC = () => {
     <>
       <button
         onClick={isMenuOpen}
-        className={menuClasses.button}
+        className={menuClass.button}
       >
         Menu
       </button>
-      <div className={`${menuClasses.menuContainer} ${isOpen ? 'flex' : 'hidden'}`}>
-        <Link href='/Header/Menu/Support' className={menuClasses.links}>
+      <div className={`${menuClass.menuContainer} ${isOpen ? 'flex' : 'hidden'}`}>
+        <Link
+          href='/Header/Menu/Support' className={menuClass.links}>
           Apoio
         </Link>
-        <Link href='/Header/Menu/Events' className={menuClasses.links}>
+        <Link
+          href='/Header/Menu/Events' className={menuClass.links}>
           Eventos
         </Link>
-        <Link href='/Header/Menu/News' className={menuClasses.links}>
+        <Link
+          href='/Header/Menu/News' className={menuClass.links}>
           Novidades
         </Link>
       </div>
