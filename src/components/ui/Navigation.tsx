@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { routes } from '@/routes/Header/Navigation/Navigation'
 
 export const Navigation: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -21,15 +20,12 @@ export const Navigation: React.FC = () => {
                     )}
                 </button>
             </div>
-            <ul className={`flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 ${isOpen ? 'flex' : 'hidden'} md:flex`}>
-                {Object.keys(routes).map((key, index) => (
-                    <li key={index}>
-                        <Link href={routes[key as keyof typeof routes]} className='text-gray-300 font-serif hover:text-orange-400 text-xl hover:underline'>
-                            {key.charAt(0).toUpperCase() + key.slice(1)}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </nav>
+            <div className={`flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-4 ${isOpen ? 'flex' : 'hidden'} md:flex`}>
+                <Link href="/" className="text-gray-300 font-serif hover:text-orange-400 text-xl hover:underline">Início</Link>
+                <Link href="/Header/About/About" className="text-gray-300 font-serif hover:text-orange-400 text-xl hover:underline">Sobre</Link>
+                <Link href="/Header/Report/Report" className="text-gray-300 font-serif hover:text-orange-400 text-xl hover:underline">Relatar</Link>
+                <Link href="/Header/Register/Register" className="text-gray-300 font-serif hover:text-orange-400 text-xl hover:underline">Cadastro</Link>
+            </div>
+        </nav >
     )
 }
