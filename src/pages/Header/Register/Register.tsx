@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Header } from '@/(accidentzero)/Header'
 import { Footer } from '@/(accidentzero)/Footer'
+import { createUserWithEmailAndPassword } from 'firebase/auth'
 
 const Register: React.FC = () => {
     const [formData, setFormData] = useState({
@@ -20,8 +21,18 @@ const Register: React.FC = () => {
 
     const submitForm = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // Enviar dados para a API
-        console.log(formData)
+        import('firebase/auth').then(({ getAuth }) => {
+            createUserWithEmailAndPassword(getAuth(), formData.email, formData.password)
+                .then((userCredential) => {
+                    const user = userCredential.user
+                    console.log('Usuário criado:', user)
+                })          
+                .catch((error) => {
+                    const errorCode = error.code
+                    const errorMessage = error.message
+                    console.error('Erro:', errorCode, errorMessage)
+            })
+        })
     }
 
     return (
