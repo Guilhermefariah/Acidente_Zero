@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { userMenuRoutes } from '@/routes/Header/UserMenuRoutes/UserMenuRoutes'
 
 export const UserMenu: React.FC = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -48,11 +47,8 @@ export const UserMenu: React.FC = () => {
                 </button>
                 {menuOpen && (
                     <div className='absolute right-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg py-0 flex flex-col'>
-                        {Object.keys(userMenuRoutes).map((key, index) => (
-                            <Link key={index} href={userMenuRoutes[key as keyof typeof userMenuRoutes]} className='block px-4 py-2 text-gray-300 hover:bg-gray-700'>
-                                {key.charAt(0).toUpperCase() + key.slice(1)}
-                            </Link>
-                        ))}
+                        <Link href='/profile' className='block px-4 py-2 text-gray-300 hover:bg-gray-700'>Perfil</Link>
+                        <Link href='/profile' className='block px-4 py-2 text-gray-300 hover:bg-gray-700'>Configurações</Link>
                         <button className='block w-full text-left px-4 py-2 text-gray-300 hover:bg-gray-700'>Sair</button>
                     </div>
                 )}
