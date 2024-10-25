@@ -30,7 +30,12 @@ export const Search: React.FC = () => {
                     onClick={iconClick}
                     className={searchClass.button}
                 >
-                    <Image src='/img/search.png' alt='Search' width={25} height={25} />
+                    <Image
+                        src='/img/search.png'
+                        alt='Search'
+                        width={25}
+                        height={25}
+                    />
                 </button>
             </div >
         </>
