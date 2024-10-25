@@ -1,10 +1,10 @@
 'use client'
 import React from 'react'
-import { Header } from '@/(accidentzero)/Header'
-import { Footer } from '@/(accidentzero)/Footer'
+import { Header } from '@/app/(accidentzero)/Header'
+import { Footer } from '@/app/(accidentzero)/Footer'
 import dynamic from 'next/dynamic'
 
-const Map = dynamic(() => import('@/(accidentzero)/Map').then((mod) => mod.Map), {
+const Map = dynamic(() => import('@/app/(accidentzero)/Map').then((mod) => mod.Map), {
     ssr: false,
 })
 

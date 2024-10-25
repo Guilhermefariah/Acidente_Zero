@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api'
-import { Modal } from '../components/Map/Modal'
+import { Modal } from '../../components/Map/Modal'
 
 const mapClass = {
     container: 'bg-gray-900 p-4',

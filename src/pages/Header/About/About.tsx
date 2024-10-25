@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Header } from '@/(accidentzero)/Header'
-import { Footer } from '@/(accidentzero)/Footer'
+import { Header } from '@/app/(accidentzero)/Header'
+import { Footer } from '@/app/(accidentzero)/Footer'
 
 const About: React.FC = () => {
     return (
