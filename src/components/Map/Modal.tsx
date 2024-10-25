@@ -1,5 +1,11 @@
-import React from 'react'
-import { ModalProps } from '@/models/Map/ModalProps'
+import React, { ReactNode } from 'react'
+
+interface ModalProps {
+    title: string
+    onClose: () => void
+    onConfirm: () => void
+    children: ReactNode
+}
 
 export const Modal: React.FC<ModalProps> = ({ title, onClose, onConfirm, children }) => {
     return (

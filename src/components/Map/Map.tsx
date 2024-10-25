@@ -2,7 +2,13 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api'
 import { Modal } from './Modal'
-import { MarkerType } from '@/models/Map/MarkerType'
+
+interface MarkerType {
+    position: google.maps.LatLngLiteral
+    id: number
+}
+
+const googleMapsApiKey = process.env.GOOGLE_MAPS_API_KEY
 
 export const Map = () => {
     const [markers, setMarkers] = useState<MarkerType[]>([])
@@ -30,7 +36,8 @@ export const Map = () => {
     }
 
     const { isLoaded, loadError } = useJsApiLoader({
-        googleMapsApiKey: 'AIzaSyDOE23aQV3prquDwLQGNBHpUVUwul33yNg',
+        googleMapsApiKey: googleMapsApiKey || '',
+        libraries: ['places'],
     })
 
     if (loadError) return <div className='text-red-500'>Erro ao carregar o mapa</div>
