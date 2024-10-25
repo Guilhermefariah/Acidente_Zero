@@ -4,7 +4,7 @@ import { Header } from '@/(accidentzero)/Header'
 import { Footer } from '@/(accidentzero)/Footer'
 import dynamic from 'next/dynamic'
 
-const Map = dynamic(() => import('@/components/Map/Map').then((mod) => mod.Map), {
+const Map = dynamic(() => import('@/(accidentzero)/Map').then((mod) => mod.Map), {
     ssr: false,
 })
 

@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { GoogleMap, Marker, InfoWindow, useJsApiLoader } from '@react-google-maps/api'
-import { Modal } from './Modal'
+import { Modal } from '../components/Map/Modal'
+
+const mapClass = {
+    container: 'bg-gray-900 p-4',
+    mapBorder: 'border-2 border-gray-600 relative',
+    buttonContainer: 'text-start mt-2 flex flex-wrap gap-2 sm:gap-4 lg:gap-6',
+    button: 'bg-gray-800 text-gray-300 py-2 px-4 rounded hover:bg-gray-700 transition duration-300 ease-in-out',
+}
 
 interface MarkerType {
     position: google.maps.LatLngLiteral
@@ -77,8 +84,8 @@ export const Map = () => {
     }
 
     return (
-        <div className='bg-gray-900 p-4'>
-            <div className='border-2 border-gray-600 relative'>
+        <div className={mapClass.container}>
+            <div className={mapClass.mapBorder}>
                 <GoogleMap
                     center={{ lat: -23.257046, lng: -46.739705 }}
                     zoom={13}
@@ -107,21 +114,21 @@ export const Map = () => {
                     ))}
                 </GoogleMap>
             </div>
-            <div className='text-start mt-2 flex flex-wrap gap-2 sm:gap-4 lg:gap-6'>
+            <div className={mapClass.buttonContainer}>
                 <button
-                    className='bg-gray-700 text-gray-300 py-2 px-4 rounded hover:bg-gray-600 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
+                    className={mapClass.button}
                     onClick={clearMarkers}
                 >
                     Limpar
                 </button>
                 <button
-                    className='bg-gray-600 text-gray-300 py-2 px-4 rounded hover:bg-gray-500 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
+                    className={mapClass.button}
                     onClick={saveMarkers}
                 >
                     Salvar
                 </button>
                 <button
-                    className='bg-gray-500 text-gray-300 py-2 px-4 rounded hover:bg-gray-400 transform transition-transform duration-300 ease-in-out hover:scale-110 lg:px-6 lg:py-3'
+                    className={mapClass.button}
                     onClick={useLocate}
                 >
                     Minha Localização
